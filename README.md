@@ -4,6 +4,8 @@ Based on res9a.tex from http://www.rpi.edu/dept/arc/training/latex/resumes/
 
 ## To generate it yourself
 
+Open up a terminal and type:
+
   git clone git://github.com/philtr/resume.git
   wget http://www.rpi.edu/dept/arc/training/latex/resumes/res.cls
   wget http://www.rpi.edu/dept/arc/training/latex/resumes/helvetica.sty
