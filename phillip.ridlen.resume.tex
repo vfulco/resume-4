@@ -2,46 +2,32 @@
 \documentclass[margin]{res}
 
 \usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-
-% \usepackage{newcent}   % uses new century schoolbook postscript font 
-
-%\usepackage{cmbright}
-
-% \usepackage[T1]{fontenc}
-% \usepackage[bitstream-charter]{mathdesign}
-
 \usepackage[T1]{fontenc}
 \usepackage[sc]{mathpazo}
-% \usepackage{gfsdidot}
-
-% \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
 
 \usepackage{setspace}
-
-\usepackage{multirow}
 
 \setlength{\textwidth}{5.1in} % set width of text portion
 
 \begin{document}
 
-% Center the name over the entire width of resume:{
- % \moveleft.5\hoffset\centerline{\LARGE\textbf{ Phillip T. Ridlen}}
- \moveleft\hoffset\vbox{\LARGE\textbf{\textsf{Phillip T. Ridlen}} \textrm{\{ \textit{Developer \& Designer} \}}}
+% Name and subtitle, left-aligned across the whole page.
+\moveleft\hoffset\vbox{\LARGE\textbf{\textsf{Phillip T. Ridlen}} \textrm{\{ \textit{Developer \& Designer} \}}}
 
-% Draw a horizontal line the whole width of resume:
+% Contact information box
  \moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}\setstretch{1}\bigskip
-% address begins here
-% Again, the address lines must be centered over entire width of resume:
- \moveleft1.06\hoffset\vbox { \sffamily
+ \moveleft1.06\hoffset\vbox{\sffamily
+ 
   \begin{tabular}{l@{\hspace{.70in}}l@{\hspace{.5in}}|@{\hspace{.3in}}l@{\hspace{.70in}}l}
-    \textbf{\textsf{Address:}}  & 2340 Trail Tree Ct & \textbf{\textsf{Telephone:}} & (682) 233-3232 \\
-                                & Burleson, TX 76028 & \textbf{\textsf{E-mail:}}    & phillip@ridlen.net \\
-                                & USA                & \textbf{\textsf{Website:}}   & http://www.phillipridlen.com \\
-                                &                    &                              & http://github.com/philtr \bigskip
-  \end{tabular}}
+    \textbf{Address:} & 2340 Trail Tree Ct & \textbf{Telephone:}  & (682) 233-3232 \\
+                      & Burleson, TX 76028 & \textbf{E-mail:}     & phillip@ridlen.net \\
+                      & USA                & \textbf{Website:}    & http://www.phillipridlen.com \\
+                      &                    &                      & http://github.com/philtr \bigskip
+  \end{tabular}}  
   
-  \moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}\setstretch{1}%\smallskip
-  
+  \moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}\setstretch{1}
+
+
 
 \begin{resume}
  
@@ -59,8 +45,8 @@
                 {\sl Certificate,} Biblical Studies\dotfill May 2006 \\
                 Emphasis, Computer Information Systems\\
                 Emmaus Bible College in Dubuque, IA
- 
- 
+
+
 \section{\textsf{Skills}}
 
                 {\sl General:} Attention to detail, fast learner, good listener, effective communicator  \\
@@ -93,9 +79,8 @@
                   \item Performed routine preventative maintenance on office desktop PCs
                   \item Provided effective PC troubleshooting
                 \end{itemize}
-          
-                
-                
+
+      
 \section{\textsf{Endorsements}}
                 
                 ``I can and do fully recommend Phillip Ridlen for any position that requires 
