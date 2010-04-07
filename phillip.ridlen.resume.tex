@@ -1,0 +1,122 @@
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+
+\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+
+% \usepackage{newcent}   % uses new century schoolbook postscript font 
+
+%\usepackage{cmbright}
+
+% \usepackage[T1]{fontenc}
+% \usepackage[bitstream-charter]{mathdesign}
+
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+% \usepackage{gfsdidot}
+
+% \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
+\usepackage{setspace}
+
+\usepackage{multirow}
+
+\setlength{\textwidth}{5.1in} % set width of text portion
+
+\begin{document}
+
+% Center the name over the entire width of resume:{
+ % \moveleft.5\hoffset\centerline{\LARGE\textbf{ Phillip T. Ridlen}}
+ \moveleft\hoffset\vbox{\LARGE\textbf{\textsf{Phillip T. Ridlen}} \textrm{\{ \textit{Developer \& Designer} \}}}
+
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}\setstretch{1}\bigskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+ \moveleft1.06\hoffset\vbox { \sffamily
+  \begin{tabular}{l@{\hspace{.70in}}l@{\hspace{.5in}}|@{\hspace{.3in}}l@{\hspace{.70in}}l}
+    \textbf{\textsf{Address:}}  & 2340 Trail Tree Ct & \textbf{\textsf{Telephone:}} & (682) 233-3232 \\
+                                & Burleson, TX 76028 & \textbf{\textsf{E-mail:}}    & phillip@ridlen.net \\
+                                & USA                & \textbf{\textsf{Website:}}   & http://www.phillipridlen.com \\
+                                &                    &                              & http://github.com/philtr \bigskip
+  \end{tabular}}
+  
+  \moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}\setstretch{1}%\smallskip
+  
+
+\begin{resume}
+ 
+\section{\textsf{Objective}} 
+
+                To obtain a full-time position as a web application developer.
+
+
+\section{\textsf{Education}} 
+
+                {\sl Bachelor of Science,} Software Engineering\dotfill expected May 2010\\
+                Minor, Mathematics\\
+                The University of Texas at Arlington
+                
+                {\sl Certificate,} Biblical Studies\dotfill May 2006 \\
+                Emphasis, Computer Information Systems\\
+                Emmaus Bible College in Dubuque, IA
+ 
+ 
+\section{\textsf{Skills}}
+
+                {\sl General:} Attention to detail, fast learner, good listener, effective communicator  \\
+                {\sl Programming:} Ruby/Rails, PHP, MySQL, JavaScript/jQuery, Java/C++, others \\
+                {\sl Design:} Photoshop, Illustrator, (X)HTML/CSS \\
+                {\sl Miscellaneous:} Microsoft Office, Apple iWork, \LaTeX
+
+
+\section{\textsf{Relevant \\ Experience}} 
+                
+                {\sl Web Guru}
+                 at Diverse Suspension Technologies in Burleson, TX\dotfill 2009--Present
+                 \begin{itemize} \itemsep -2pt %reduce space between items
+                   \item Refreshed design of existing websites
+                   \item Ensured XHTML compliance
+                   \item Wrote a time clock application using Ruby on Rails
+                \end{itemize}
+                
+                {\sl Freelance Web Development \textrm{\&} Graphic Design}
+                in Burleson, TX\dotfill 2003--Present
+                \begin{itemize} \itemsep -2pt %reduce space between items
+                  \item Developed custom websites and WordPress themes
+                  \item Designed album art for several bands
+                  \item Designed T-Shirts for several organizations and businesses
+                \end{itemize}
+                
+                {\sl OnForce Technician}
+                at Ball Corporation in Fort Worth, TX\dotfill 2007--2009
+                \begin{itemize} \itemsep -2pt %reduce space between items
+                  \item Performed routine preventative maintenance on office desktop PCs
+                  \item Provided effective PC troubleshooting
+                \end{itemize}
+          
+                
+                
+\section{\textsf{Endorsements}}
+                
+                ``I can and do fully recommend Phillip Ridlen for any position that requires 
+                knowledge of standards-compliant HTML. There was no need for him to refresh his 
+                memory on the subject and he flew through the work we asked of him.'' \\
+                {\sl -- Graham Slaughter,} Owner of Diverse Suspension Technologies
+
+                ``Phillip is someone who carefully reads the customer and then 
+                provides the expected service...Phillip is truly a man of great character. 
+                He puts his heart into anything he does. He doesn't hesitate to seek advice 
+                to improve himself and his approach to a service or product.'' \\
+                {\sl -- Gibby Espinoza,} Customer
+
+
+\section{\textsf{Honors \\and Awards}}{\sl Honor Roll,} University of Texas at Arlington, Spring/Fall 2009 \\
+                {\sl Dean's List,} Tarrant County College, Spring/Summer 2006
+                
+                
+\end{resume}
+\end{document}
+
+
+
+
