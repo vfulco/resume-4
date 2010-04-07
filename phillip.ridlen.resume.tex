@@ -8,14 +8,19 @@
 \usepackage{setspace}
 
 \setlength{\textwidth}{5.1in} % set width of text portion
+\setlength{\parskip}{8pt}
+
+\newcommand{\widerule}{
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}
+}
 
 \begin{document}
 
 % Name and subtitle, left-aligned
-\moveleft\hoffset\vbox{\LARGE\textbf{\textsf{Phillip T. Ridlen}} \textrm{\{ \textit{Developer \& Designer} \}}}
+\moveleft\hoffset\vbox{\LARGE\textbf{\textsf{Phillip T. Ridlen}} \textrm{\{ \textit{Developer \& Designer} \}}}\bigskip\smallskip
 
 % Contact information box
- \moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}\bigskip
+ \widerule\bigskip
  \moveleft1.06\hoffset\vbox{\sffamily
  
   \begin{tabular}{l@{\hspace{.70in}}l@{\hspace{.5in}}|@{\hspace{.3in}}l@{\hspace{.70in}}l}
@@ -24,8 +29,7 @@
                       & USA                & \textbf{Website:}    & http://www.phillipridlen.com \\
                       &                    &                      & http://github.com/philtr \bigskip
   \end{tabular}}  
-  
-  \moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}
+  \widerule 
 
 \begin{resume}
 
@@ -33,14 +37,13 @@
 
                 To obtain a full-time position as a web application developer.
 
+\section{\textsf{Education}}
 
-\section{\textsf{Education}} 
-
-                {\sl Bachelor of Science,} Software Engineering\dotfill expected May 2010\\
-                Minor, Mathematics\\
+                {\sl Bachelor of Science,} Software Engineering \dotfill expected May 2010\\
+								Minor, Mathematics \\
                 The University of Texas at Arlington
                 
-                {\sl Certificate,} Biblical Studies\dotfill May 2006 \\
+                {\sl Certificate,} Biblical Studies \dotfill May 2006 \\
                 Emphasis, Computer Information Systems\\
                 Emmaus Bible College in Dubuque, IA
 
@@ -50,7 +53,7 @@
                 {\sl General:} Attention to detail, Fast learner, Good listener, Effective communicator  \\
                 {\sl Programming:} Ruby/Rails, PHP, MySQL, JavaScript/jQuery, Java/C++, others \\
                 {\sl Design:} Photoshop, Illustrator, (X)HTML/CSS \\
-                {\sl Miscellaneous:} Microsoft Office, Apple iWork, \LaTeX
+                % {\sl Miscellaneous:} Microsoft Office, Apple iWork, \LaTeX
 
 
 \section{\textsf{Relevant \\ Experience}} 
@@ -68,7 +71,7 @@
                 \begin{itemize} \itemsep -2pt %reduce space between items
                   \item Developed custom websites and WordPress themes
                   \item Designed album art for several bands
-                  \item Designed T-Shirts for several organizations and businesses
+                  \item Designed T-shirts for several organizations and businesses
                 \end{itemize}
                 
                 {\sl OnForce Technician}
