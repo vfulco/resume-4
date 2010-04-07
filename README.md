@@ -4,7 +4,7 @@ Based on res9a.tex from http://www.rpi.edu/dept/arc/training/latex/resumes/
 
 ## To generate it yourself
 
-Open up a terminal and type:
+If you have pdflatex installed, open up a terminal and type:
 
 	git clone git://github.com/philtr/resume.git
 	wget http://www.rpi.edu/dept/arc/training/latex/resumes/res.cls
@@ -13,5 +13,5 @@ Open up a terminal and type:
   
 ## License
 
-Copyright (C)2010 Phillip Ridlen. However, nothing's going to stop you from 
+Copyright &copy;2010 Phillip Ridlen. However, nothing's going to stop you from 
 stealing it from me. Also, I can't afford a lawyer.
