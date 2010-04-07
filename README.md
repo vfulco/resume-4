@@ -7,6 +7,7 @@ Based on res9a.tex from http://www.rpi.edu/dept/arc/training/latex/resumes/
 If you have pdflatex installed, open up a terminal and type:
 
 	git clone git://github.com/philtr/resume.git
+	cd resume/
 	wget http://www.rpi.edu/dept/arc/training/latex/resumes/res.cls
 	wget http://www.rpi.edu/dept/arc/training/latex/resumes/helvetica.sty
 	pdflatex phillip.ridlen.resume.tex
