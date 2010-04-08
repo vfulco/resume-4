@@ -1,33 +1,46 @@
 % LaTeX resume using res.cls
 \documentclass[margin]{res}
 
-\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-\usepackage[T1]{fontenc}
-\usepackage[sc]{mathpazo}
+% set up fonts
+\usepackage[LGR,T1]{fontenc}
+\usepackage{helvetica}
+% \usepackage{tgheros} % if helvetica.sty is not available
+\usepackage{tgpagella}
 
 \usepackage{setspace}
 
 \setlength{\textwidth}{5.1in} % set width of text portion
+
+% this value may need to be adjusted as content is added or removed.
 \setlength{\parskip}{8pt}
 
-\newcommand{\widerule}{
-\moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}
-}
+% DRY
+\newcommand{\widerule}{\moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}}
 
 \begin{document}
 
 % Name and subtitle, left-aligned
-\moveleft\hoffset\vbox{\LARGE\textbf{\textsf{Phillip T. Ridlen}} \textrm{\{ \textit{Developer \& Designer} \}}}\bigskip\smallskip
+\moveleft\hoffset\vbox{
+	\LARGE
+		\textbf{\textsf{Phillip T. Ridlen}} 
+		\textrm{\{ \textit{Developer \& Designer} \}}
+	}\bigskip\smallskip
 
 % Contact information box
  \widerule\bigskip
  \moveleft1.06\hoffset\vbox{\sffamily
  
   \begin{tabular}{l@{\hspace{.70in}}l@{\hspace{.5in}}|@{\hspace{.3in}}l@{\hspace{.70in}}l}
-    \textbf{Address:} & 2340 Trail Tree Ct & \textbf{Telephone:}  & +1 682 233 3232 \\
+		% Sans-serif contact information
+	  \textbf{Address:} & 2340 Trail Tree Ct & \textbf{Telephone:}  & +1 682 233 3232 \\
                       & Burleson, TX 76028 & \textbf{E-mail:}     & phillip@ridlen.net \\
                       & USA                & \textbf{Website:}    & http://www.phillipridlen.com \\
-                      &                    &                      & http://github.com/philtr \bigskip
+                      &                    &                      & http://github.com/philtr \bigskip	
+		% Serif contact information
+    % \textbf{Address:} & \textrm{2340 Trail Tree Ct} & \textbf{Telephone:}  & \textrm{+1 682 233 3232} \\
+    %                   & \textrm{Burleson, TX 76028} & \textbf{E-mail:}     & \textrm{phillip@ridlen.net} \\
+    %                   & \textrm{USA}                & \textbf{Website:}    & \textrm{http://www.phillipridlen.com} \\
+    %                   &                    					&                      & \textrm{http://github.com/philtr} \bigskip
   \end{tabular}}  
   \widerule 
 
@@ -78,7 +91,7 @@
 
       
 \section{\textsf{Endorsements}}
-                
+
                 ``I can and do fully recommend Phillip Ridlen for any position that requires 
                 knowledge of standards-compliant HTML. There was no need for him to refresh his 
                 memory on the subject and he flew through the work we asked of him.'' \\
