@@ -13,7 +13,7 @@
 \setlength{\textwidth}{5.1in} % set width of text portion
 
 % this value may need to be adjusted as content is added or removed.
-\setlength{\parskip}{10pt}
+\setlength{\parskip}{8pt}
 
 
 % DRY
@@ -21,7 +21,7 @@
 \renewcommand{\labelitemi}{\ding{71}}
 
 \begin{document}
-
+\small
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
 	\LARGE
@@ -31,17 +31,17 @@
 
 % Contact information box
  \widerule\bigskip
- \moveleft1.06\hoffset\vbox{\sffamily
+ \moveleft1.06\hoffset\vbox{
 
   \begin{tabular}{l@{\hspace{.70in}}l@{\hspace{.5in}}|@{\hspace{.3in}}l@{\hspace{.70in}}l}
-	  \textbf{Address:} & 2340 Trail Tree Ct  & \textbf{Telephone:}		& +1 682 233 3232               \\
-                      & Burleson, TX 76028  & \textbf{E-mail:}			& phillip@ridlen.net            \\
-                      & USA                 & \textbf{Website:}			& http://www.phillipridlen.com  \\
+	  \textbf{\textsf{Address:}} & 2340 Trail Tree Ct  & \textbf{\textsf{Telephone:}}		& +1 682 233 3232               \\
+                      & Burleson, TX 76028  & \textbf{\textsf{E-mail:}}			& phillip@ridlen.net            \\
+                      & USA                 & \textbf{\textsf{Website:}}			& http://www.phillipridlen.com  \\
                       &                     &												& http://github.com/philtr	
   \end{tabular}}  
   \bigskip\widerule 
 
-\begin{resume}\setstretch{1.16}
+\begin{resume}\setstretch{1}
 
 \section{\textsf{Skills}}
 
@@ -50,28 +50,30 @@
                 \textit{Design:} Photoshop, Illustrator, (X)HTML/CSS                                       %\\
                 % \textit{Miscellaneous:} Microsoft Office, Apple iWork, \LaTeX
 
+\vspace{10pt}
 
 \section{\textsf{Education}}
 
-                \textit{Bachelor of Science} in Software Engineering \dotfill (expected) May 2010   \\
-								Minor in Mathematics \hfill | \textsc{The University of Texas at Arlington}                                                                
+                \textit{Bachelor of Science} in Software Engineering \dotfill May 2010   \\
+								Minor in Mathematics \hfill  \textsc{The University of Texas at Arlington}                                                                
 								                
-                \textit{Certificate} in Biblical Studies \dotfill May 2006  \\
-                Emphasis in Computer Information Systems \hfill | \textsc{Emmaus Bible College}                    
+                \textit{Certificate} in Biblical Studies \dotfill 2006  \\
+                Emphasis in Computer Information Systems \hfill  \textsc{Emmaus Bible College}                    
 
+\vspace{10pt}
 
 
 \section{\textsf{Relevant \\ Experience}} 
 
                 \textit{Interactive Developer}
 				 at \textsc{Balcom Agency} in Fort Worth, TX\dotfill 2010--Present
-				 \begin{itemize} \itemsep -2pt %reduce space between items
+				 \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items
 				 	\item Going to do some cool stuff!
 				 \end{itemize}
 
                 \textit{Web Guru}
                  at \textsc{Diverse Suspension Technologies} in Burleson, TX\dotfill 2009--2010
-                 \begin{itemize} \itemsep -2pt %reduce space between items
+                 \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items
                    \item Refreshed design of existing websites
                    \item Ensured XHTML compliance
                    \item Wrote a time clock application using Ruby on Rails
@@ -79,17 +81,19 @@
                 
                 \textit{Freelance Web Development \textrm{\&} Graphic Design}
                 in Burleson, TX\dotfill 2003--2010
-                \begin{itemize} \itemsep -2pt %reduce space between items
+                \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items
                   \item Developed custom websites and WordPress themes
                   \item Designed print products for local bands, organizations, and businesses
                 \end{itemize}
                 
                 \textit{OnForce Technician}
                 at \textsc{Ball Corporation} in Fort Worth, TX\dotfill 2007--2009
-                \begin{itemize} \itemsep -2pt %reduce space between items
+                \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items
                   \item Provided effective PC troubleshooting
                   \item Performed routine preventative maintenance on office desktop PCs
                 \end{itemize}
+
+\vspace{10pt}
 
       
 \section{\textsf{Endorsements}}
@@ -104,14 +108,21 @@
                 He puts his heart into anything he does. He doesn't hesitate to seek advice 
                 to improve himself and his approach to a service or product.''                    \\
                 \textit{-- Gibby Espinoza,} Customer
+
+\vspace{10pt}
                 
-                \textsf{\textbf{\footnotesize Contact information for personal and professional references is available upon request.}}
 
 % Probably not going to need this section anymore
-% \section{\textsf{Honors \\and Awards}}
-%                 
-%                 \textit{Honor Roll,} University of Texas at Arlington. Spring/Fall 2009 \\
-%                 \textit{Dean's List,} Tarrant County College. Spring/Summer 2006
+\section{\textsf{Honors \\and Awards}}
+                
+                \textit{Honor Roll,} University of Texas at Arlington. Spring/Fall 2009, Spring 2010 \\
+                \textit{Dean's List,} Tarrant County College. Spring/Summer 2006
+
+\vspace{12pt}
+
+
+\textsf{\textbf{\footnotesize Contact information for personal and professional references is available upon request.}}
+
                 
 \end{resume}
 \end{document}
