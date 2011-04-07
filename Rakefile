@@ -30,8 +30,8 @@ task :publish, :branch do |t, args|
   `git checkout #{branch[0]}`
   Rake::Task[:generate].invoke
   `cp output/#{@filename}.* .`
-  `cp #{@filename}.html index.html`
   `git checkout #{branch[1]}`
+  `cp #{@filename}.html index.html`
   `git add .`
   `git commit -m "Publish resume #{Time.now}"`
   `git push origin #{branch[1]}`
