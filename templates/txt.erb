@@ -1,0 +1,9 @@
+<%# Yes, this is HTML. But it will get processed through lynx for formatting. %>
+
+<h1><%= @resume.particulars.name.join(' ')%><br />
+<%= @resume.particulars.tagline %></h1>
+
+<h1><%= @resume.particulars.contact.address.street %><br />
+  <%= @resume.particulars.contact.address.street2 %><br />
+  <%= @resume.particulars.contact.address.city %>, <%= @resume.particulars.contact.address.state %> <%= @resume.particulars.contact.address.zipcode %><br />
+  <%= @resume.particulars.contact.telephone %></h1>
