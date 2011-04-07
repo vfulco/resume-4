@@ -1,18 +1,3 @@
 # Résumé
 
-Based on res9a.tex from http://www.rpi.edu/dept/arc/training/latex/resumes/
-
-## To generate it yourself
-
-If you have pdflatex installed, open up a terminal and type:
-
-	git clone git://github.com/philtr/resume.git
-	cd resume/
-	wget http://www.rpi.edu/dept/arc/training/latex/resumes/res.cls
-	wget http://www.rpi.edu/dept/arc/training/latex/resumes/helvetica.sty
-	pdflatex phillip.ridlen.resume.tex
-  
-## License
-
-Copyright &copy;2010 Phillip Ridlen. However, nothing's going to stop you from 
-stealing it from me. Also, I can't afford a lawyer.
+Data is stored in `resume.yaml` and then procesed in to formats in `templates/*.erb`
