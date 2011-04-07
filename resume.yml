@@ -16,7 +16,7 @@ particulars:
     websites:
       - "http://phillipridlen.com"
       - "http://github.com/philtr"
-      
+
 skills:
   - category: General
     - Attention to detail
@@ -38,7 +38,7 @@ skills:
     - Microsoft Office
     - LaTeX
     - Typing Speed: 60-80 wpm
-    
+
 education:
   - school:
       name: University of Texas at Arlington
@@ -69,7 +69,7 @@ experience:
           city: Fort Worth
           state: Texas
           zip: 76102
-        telephone: +18178779933
+        telephone: "+18178779933"
     title: Interactive Developer
     points:
       - "Built, deployed, and maintained websites for clients using Ruby on Rails and Drupal"
