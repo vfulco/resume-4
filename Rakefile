@@ -30,6 +30,7 @@ task :publish, :branch do |t, args|
   `mv #{@filename}.html index.html`
   `git checkout #{branch[1]}`
   `git commit -m "Publish resume #{Time.now}"`
+  `git push origin #{branch[1]}`
   `git checkout #{branch[0]}`
 end
 
