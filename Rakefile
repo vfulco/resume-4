@@ -24,11 +24,13 @@ end
 
 task :publish, :branch do |t, args|
   load_resume
+  branch = args.branch.split(':')
+  branch[1] = branch[0] if branch.count == 1
   `cp output/#{@filename}.* .`
   `mv #{@filename}.html index.html`
-  `git checkout #{args.branch}`
+  `git checkout #{branch[1]}`
   `git commit -m "Publish resume #{Time.now}"`
-  `git checkout $(current_branch)`
+  `git checkout #{branch[0]}`
 end
 
 namespace :hooks do
