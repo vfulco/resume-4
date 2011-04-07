@@ -1,0 +1,130 @@
+particulars:
+  name:
+    first: Phillip
+    middle: Thomas
+    last: Ridlen
+  tagline: | Web & Software Developer
+  contact:
+    address:
+      street: 5008 Lincoln Oaks Drive North
+      street2: Apartment 502
+      city: Fort Worth
+      state: Texas
+      zip: 76123
+    telephone: +16825579480
+    email: phillip@ridlen.net
+    websites:
+      - | http://phillipridlen.com
+      - | http://github.com/philtr
+      
+skills:
+  - category: General
+    - Attention to detail
+    - Fast learner
+    - Good listener
+    - Effective communicator
+  - category: Development
+    - Ruby/Rails
+    - PHP
+    - MySQL/PostgreSQL
+    - Javascript/jQuery
+    - Git
+  - category: Design
+    - Photoshop
+    - Illustrator
+    - (X)HTML/CSS
+  - category: Office
+    - Apple iWork
+    - Microsoft Office
+    - LaTeX
+    - Typing Speed: 60-80 wpm
+    
+education:
+  - school:
+      name: University of Texas at Arlington
+      contact:
+        address:
+          city: Arlington
+          state: Texas
+    degree:
+      type: Bachelor of Science
+      major: Software Engineering
+      minor: Mathematics
+  - school:
+      name: Emmaus Bible College
+      contact:
+        address:
+          city: Dubuque
+          state: Iowa
+    degree:
+      type: Certificate
+      major: Biblical Studies
+
+experience:
+  - company:
+      name: Balcom Agency
+      contact:
+        address:
+          street: 1500 Ballinger @ Rio Grande
+          city: Fort Worth
+          state: Texas
+          zip: 76102
+        telephone: +18178779933
+    title: Interactive Developer
+    points:
+      - | Built, deployed, and maintained websites for clients using Ruby on
+          Rails and Drupal
+      - | Designed a deployment infrastructure for Drupal websites
+      - | Developed a website monitoring tool to notify us of unavailability
+  - company:
+      name: Diverse Suspension Technologies
+      contact:
+        address:
+          city: Stephenville
+          state: Texas
+    points:
+      - | Refreshed design of existing websites
+      - | Ensured XHTML compliance
+      - | Wrote a time clock web app using Ruby on Rails
+  - company:
+      contact:
+        address:
+          city: Burleson
+          state: Texas
+    title: Freelance Design and Development
+    points:
+      - | Developed custom websites and WordPress themes
+      - | Designed print products for local bands, organizations, and businesses
+  - company:
+      name: Ball Corporation
+      contact:
+        address:
+          city: Fort Worth
+          state: Texas
+    title: OnForce Technicion
+    points:
+      - Provided effective PC troubleshooting
+      - Performed routine preventative maintenance on office desktop PCs
+
+endorsements:
+  - from:
+      name: Gibby Espinoza
+      rel: Customer
+    body: |
+      Phillip is someone who carefully reads the customer and then provides the
+      expected service. Phillip is truly a man of great character. He puts his
+      heart into anything he does. He doesn't hesitate to seek advice to improve
+      himself and his approach to a service or product.
+
+honors:
+  - title: Honor Roll
+    from: University of Texas at Arlington
+    when:
+      - Spring 2009
+      - Fall 2009
+      - Spring 2010
+  - title: Dean's List
+    from: Tarrant County College
+    when:
+      - Spring 2006
+      - Summer 2006
