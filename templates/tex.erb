@@ -46,75 +46,40 @@
 
 \section{\textsf{Skills}}
 
-                \textbf{\textit{General:}} Attention to detail, Fast learner, Good listener, Effective communicator  \\
-                \textbf{\textit{Development:}} Ruby/Rails, PHP, MySQL, jQuery, Java, Git/Subversion, others                \\
-                \textbf{\textit{Design:}} Photoshop, Illustrator, (X)HTML/CSS                                       \\
-                \textbf{\textit{Office:}} Apple iWork, Microsoft Office, \LaTeX. \textbf{\textit{Typing Speed:}} 65-80 words/min
-
+              <% @resume.skills.each do |category| %>
+                \textbf{\textit{<%= category.category.le %>:}} <%= category.skills.join(', ').le %>  \\<% end %>
 \sectionspace
 
 \section{\textsf{Education}}
-
-                \textbf{\textit{Bachelor of Science} in Software Engineering \dotfill May 2010 }  \\
-                Minor in Mathematics \hfill  \textsc{The University of Texas at Arlington}
-
-                \textbf{\textit{Certificate} in Biblical Studies \dotfill 2006 } \\
-                Emphasis in Computer Information Systems \hfill  \textsc{Emmaus Bible College}
-
+              <% @resume.education.each do |ed| %>
+                \textbf{\textit{<%= ed.degree.type %>} in <%= ed.degree.major %> \dotfill <%= ed.degree.conferred %> }  \\
+                <%= "Minor in #{ed.degree.minor}" if ed.degree.minor %><%= "Emphasis in #{ed.degree.emphasis}" if ed.degree.emphasis %> \hfill  \textsc{<%= ed.school %>}
+              <% end %>
 \sectionspace
 
 
 \section{\textsf{Relevant \\ Experience}}
 
-                \textbf{\textit{Lead Interactive Developer}
-         at \textsc{Balcom Agency} in Fort Worth, TX\dotfill 2010--Present}
-         \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items
-           \item Built and maintained websites for clients using Ruby on Rails and Drupal
-           \item Designed a deployment infrastructure for Drupal websites
-           \item Developed a website monitoring tool to notify us of unavailability
-         \end{itemize}
-
-                \textbf{\textit{Web Guru}
-                 at \textsc{Diverse Suspension Technologies} in Burleson, TX\dotfill 2009--2010}
-                 \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items
-                   \item Refreshed design of existing websites
-                   \item Ensured XHTML compliance
-                   \item Wrote a time clock web app using Ruby on Rails
-                \end{itemize}
-
-                \textbf{\textit{Freelance Web Development \textrm{\&} Graphic Design}
-                in Burleson, TX\dotfill 2003--2010}
-                \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items
-                  \item Developed custom websites and WordPress themes
-                  \item Designed print products for local bands, organizations, and businesses
-                \end{itemize}
-
-                \textbf{\textit{OnForce Technician}
-                at \textsc{Ball Corporation} in Fort Worth, TX\dotfill 2007--2009}
-                \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items
-                  \item Provided effective PC troubleshooting
-                  \item Performed routine preventative maintenance on office desktop PCs
-                \end{itemize}
+              <% @resume.experience.each do |company| %>
+                \textbf{\textit{<%= company.name.le %>}
+                 at \textsc{Balcom Agency} in <%= company.contact.address.city.le %>, <%= company.contact.address.state.le %>\dotfill <%= company.date.start.year.le %>--<%= company.date.end.year.le %>}
+                 \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items <% company.points.each do |point| %>
+                   \item <%= point.le %>
+                 <% end %>\end{itemize}
+              <% end %>
 
 \sectionspace
 
 
 \section{\textsf{Endorsements}}
 
-                ``Phillip is someone who carefully reads the customer and then
-                provides the expected service. Phillip is truly a man of great character.
-                He puts his heart into anything he does. He doesn't hesitate to seek advice
-                to improve himself and his approach to a service or product.''                    \\
-                \textit{-- Gibby Espinoza,} Customer
+              <% @resume.endorsements.each do |endorsement| %>
+                ``<%= endorsement.body.le %>''                    \\
+                \textit{-- <%= endorsement.from.name.le %>,} <%= endorsement.from.rel.le %>
+              <% end %>
 
 \sectionspace
 
-
-% Probably not going to need this section anymore
-\section{\textsf{Honors \\and Awards}}
-
-                \textit{Honor Roll,} University of Texas at Arlington. Spring/Fall 2009, Spring 2010 \\
-                \textit{Dean's List,} Tarrant County College. Spring/Summer 2006
 
 \sectionspace
 
