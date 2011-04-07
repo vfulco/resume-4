@@ -1,3 +1,8 @@
+def load_resume
+  @resume = Hashie::Mash.new(YAML::load(ERB.new(File.read('resume.yml')).result(binding)))
+  @filename = @resume.particulars.name.join('.').downcase
+end
+
 def wget(url, file=nil)
   `wget --no-check-certificate #{"-O #{file}" if file } #{url}`
 end

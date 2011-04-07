@@ -7,10 +7,9 @@ task :default => :generate
 
 desc "Generate resume in all defined formats"
 task :generate do
-  @resume = Hashie::Mash.new(YAML::load(ERB.new(File.read('resume.yml')).result(binding)))
+  load_resume
   Dir.glob('templates/*').each do |format|
     file_ext = format.sub(/\.erb$/,'').sub('templates/','')
-    @filename = @resume.particulars.name.join('.').downcase
     Rake::Task["hooks:#{file_ext}:before"].invoke rescue nil
     File.open("output/#{@filename}.#{file_ext}",'w') do |file|
       file.write ERB.new(File.read(format)).result(binding)
@@ -24,7 +23,8 @@ task :clean do
 end
 
 task :publish, :branch do |t, args|
-  `cp output/*.* .`
+  load_resume
+  `cp output/#{@filename}.* .`
   `mv #{@filename}.html index.html`
   `git checkout #{args.branch}`
   `git commit -m "Publish resume #{Time.now}"`
