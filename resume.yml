@@ -19,91 +19,120 @@ particulars:
 
 skills:
   - category: General
-    - Attention to detail
-    - Fast learner
-    - Good listener
-    - Effective communicator
+    skills:
+      - Attention to detail
+      - Fast learner
+      - Good listener
+      - Effective communicator
   - category: Development
-    - Ruby/Rails
-    - PHP
-    - MySQL/PostgreSQL
-    - Javascript/jQuery
-    - Git
+    skills:
+      - Ruby/Rails
+      - PHP
+      - MySQL/PostgreSQL
+      - Javascript/jQuery
+      - Git
   - category: Design
-    - Photoshop
-    - Illustrator
-    - (X)HTML/CSS
+    skills:
+      - Photoshop
+      - Illustrator
+      - (X)HTML/CSS
   - category: Office
-    - Apple iWork
-    - Microsoft Office
-    - LaTeX
-    - Typing Speed: 60-80 wpm
+    skills:
+      - Apple iWork
+      - Microsoft Office
+      - LaTeX
+      - "Typing Speed: 60-80 wpm"
 
 education:
-  - school:
-      name: University of Texas at Arlington
-      contact:
-        address:
-          city: Arlington
-          state: Texas
+  - school: The University of Texas at Arlington
+    contact:
+      address:
+        city: Arlington
+        state: Texas
     degree:
       type: Bachelor of Science
       major: Software Engineering
       minor: Mathematics
-  - school:
-      name: Emmaus Bible College
-      contact:
-        address:
-          city: Dubuque
-          state: Iowa
+      conferred: May 2010
+  - school: Emmaus Bible College
+    contact:
+      address:
+        city: Dubuque
+        state: Iowa
     degree:
       type: Certificate
       major: Biblical Studies
+      emphasis: Computer Information Systems
+      conferred: May 2006
 
 experience:
-  - company:
-      name: Balcom Agency
-      contact:
-        address:
-          street: 1500 Ballinger @ Rio Grande
-          city: Fort Worth
-          state: Texas
-          zip: 76102
-        telephone: "+18178779933"
+  - name: Balcom Agency
+    contact:
+      address:
+        street: 1500 Ballinger @ Rio Grande
+        city: Fort Worth
+        state: Texas
+        zip: 76102
+      telephone: "+18178779933"
     title: Interactive Developer
     points:
       - "Built, deployed, and maintained websites for clients using Ruby on Rails and Drupal"
       - "Designed a deployment infrastructure for Drupal websites"
       - "Developed a website monitoring tool to notify us of unavailability"
-  - company:
-      name: Diverse Suspension Technologies
-      contact:
-        address:
-          city: Stephenville
-          state: Texas
+    date:
+      start:
+        month: June
+        year: 2010
+      end:
+        month: <%= Time.now.strftime "%B" %>
+        year: <%= Time.now.strftime "%Y" %>
+  - name: Diverse Suspension Technologies
+    contact:
+      address:
+        city: Stephenville
+        state: Texas
+    title: Web Guru
     points:
       - "Refreshed design of existing websites"
       - "Ensured XHTML compliance"
       - "Wrote a time clock web app using Ruby on Rails"
-  - company:
-      contact:
-        address:
-          city: Burleson
-          state: Texas
-    title: Freelance Design and Development
+    date:
+      start:
+        month: March
+        year: 2009
+      end:
+        month: May
+        year: 2010
+  - name: Freelance Design and Development
+    contact:
+      address:
+        city: Burleson
+        state: Texas
+    title: Self-employed
     points:
       - "Developed custom websites and WordPress themes"
       - "Designed print products for local bands, organizations, and businesses"
-  - company:
-      name: Ball Corporation
-      contact:
-        address:
-          city: Fort Worth
-          state: Texas
+    date:
+      start:
+        year: 2003
+      end:
+        year: 2010
+  - name: Ball Corporation
+    contact:
+      address:
+        city: Fort Worth
+        state: Texas
     title: OnForce Technicion
     points:
       - Provided effective PC troubleshooting
       - Performed routine preventative maintenance on office desktop PCs
+    date:
+      start:
+        month:
+        year: 2007
+      end:
+        month: March
+        year: 2009
 
 endorsements:
   - from:
@@ -114,16 +143,3 @@ endorsements:
       expected service. Phillip is truly a man of great character. He puts his
       heart into anything he does. He doesn't hesitate to seek advice to improve
       himself and his approach to a service or product.
-
-honors:
-  - title: Honor Roll
-    from: University of Texas at Arlington
-    when:
-      - Spring 2009
-      - Fall 2009
-      - Spring 2010
-  - title: Dean's List
-    from: Tarrant County College
-    when:
-      - Spring 2006
-      - Summer 2006
