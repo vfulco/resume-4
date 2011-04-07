@@ -26,19 +26,19 @@
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
   \LARGE
-    \textbf{\textsf{Phillip T. Ridlen}}
-    \textrm{ \{\textit{Web \& Software Developer}\}}
+    \textbf{\textsf{<%= @resume.particulars.name.join(' ').tx %>}}
+    \textrm{ \textit{<%= @resume.particulars.tagline.tx %>}}
   }\bigskip\smallskip %\bigskip wasn't quite enough
 
 % Contact information box
  \widerule\bigskip
  \moveleft1.06\hoffset\vbox{
 
+  <% @contact = @resume.particulars.contact %>
   \begin{tabular}{l@{\hspace{.70in}}l@{\hspace{.4in}}|@{\hspace{.4in}}l@{\hspace{.50in}}l}
-    \textbf{\textsf{Address:}} & 5008 Lincoln Oaks Dr N Apt. 502  & \textbf{\textsf{Telephone:}}  & +1 682 557 9480               \\
-                      & Fort Worth, Texas 76132                & \textbf{\textsf{E-mail:}}      & phillip@ridlen.net            \\
-                      & USA                                    & \textbf{\textsf{Website:}}    & http://phillipridlen.com  \\
-                      &                                       &                                & http://github.com/philtr
+    \textbf{\textsf{Address:}} & <%= @contact.address.street.tx %>  & \textbf{\textsf{Telephone:}}  & <%= @contact.telephone.tx %>               \\
+                      & <%= @contact.address.street2.tx %>                & \textbf{\textsf{E-mail:}}      & <%= @contact.email.tx %>            \\
+                      & <%= @contact.address.city.tx %>, <%= @contact.address.state.tx %> <%= @contact.address.zipcode.to_s.tx %>   & \textbf{\textsf{Website:}} & <%= @contact.websites.map{|w|w.tx}.join("#{/\\/.source} \& \& \& ") %>
   \end{tabular}}
   \bigskip\widerule
 
