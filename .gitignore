@@ -5,3 +5,5 @@
 *.sty
 *.cls
 *.dvi
+output/*
+index.html
