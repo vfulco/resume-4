@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h1><%= @resume.particulars.name.join(' ') %></h1>
+      <h2><%= @resume.particulars.tagline %></h1>
+      <section id="contact">
+        <h3>Contact</h3>
+        <address>
+          <p id="street">
+            <%= @resume.particulars.contact.address.street %><br/>
+            <%= @resume.particulars.contact.address.street2 %><br/>
+            <%= @resume.particulars.contact.address.city %>,<%= @resume.particulars.contact.address.state %> <%= @resume.particulars.contact.address.zipcode %>
+          </p>
+          <p id="telephone">
+            <%= @resume.particulars.contact.telephone %>
+          </p>
+          <p id="email">
+            <a href="mailto:<%= @resume.particulars.contact.email %>"><%= @resume.particulars.contact.email %></a>
+          </p>
+          <p id="websites">
+            <% @resume.particulars.contact.websites.each do |website| %><a href="<%= website %>"><%= website %></a><br /><% end %>
+          </p>
+        </address>
+    </header>
+    <section id="skills">
+      <h3>Skills</h3>
+    </section>
+    <section id="experience">
+      <h3>Experience</h3>
+    </section>
+    <section id="endorsements">
+      <h3>Endorsements</h3>
+    </section>
+    <footer>
+      <address>
+        <%= @resume.particulars.name.join(' ') %> |
+        <%= @resume.particulars.contact.telephone %> |
+        <a href="mailto:<%= @resume.particulars.contact.email %>"><%= @resume.particulars.contact.email %></a> |
+        <a href="<%= @resume.particulars.contact.websites.first %>"><%= @resume.particulars.contact.websites.first %></a>
+      </address>
+    </footer>
+  </body>
+</html>
