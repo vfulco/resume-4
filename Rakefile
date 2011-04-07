@@ -24,7 +24,7 @@ end
 
 task :publish, :branch do |t, args|
   load_resume
-  branch = args.branch.split(':')
+  branch = args[:branch].split(':')
   branch[1] = branch[0] if branch.count == 1
   `cp output/#{@filename}.* .`
   `mv #{@filename}.html index.html`
