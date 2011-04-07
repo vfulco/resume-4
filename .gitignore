@@ -7,3 +7,4 @@
 *.dvi
 output/*
 index.html
+.bundle/*
