@@ -3,7 +3,7 @@ particulars:
     first: Phillip
     middle: Thomas
     last: Ridlen
-  tagline: | Web & Software Developer
+  tagline: "Web & Software Developer"
   contact:
     address:
       street: 5008 Lincoln Oaks Drive North
@@ -14,8 +14,8 @@ particulars:
     telephone: +16825579480
     email: phillip@ridlen.net
     websites:
-      - | http://phillipridlen.com
-      - | http://github.com/philtr
+      - "http://phillipridlen.com"
+      - "http://github.com/philtr"
       
 skills:
   - category: General
@@ -72,10 +72,9 @@ experience:
         telephone: +18178779933
     title: Interactive Developer
     points:
-      - | Built, deployed, and maintained websites for clients using Ruby on
-          Rails and Drupal
-      - | Designed a deployment infrastructure for Drupal websites
-      - | Developed a website monitoring tool to notify us of unavailability
+      - "Built, deployed, and maintained websites for clients using Ruby on Rails and Drupal"
+      - "Designed a deployment infrastructure for Drupal websites"
+      - "Developed a website monitoring tool to notify us of unavailability"
   - company:
       name: Diverse Suspension Technologies
       contact:
@@ -83,9 +82,9 @@ experience:
           city: Stephenville
           state: Texas
     points:
-      - | Refreshed design of existing websites
-      - | Ensured XHTML compliance
-      - | Wrote a time clock web app using Ruby on Rails
+      - "Refreshed design of existing websites"
+      - "Ensured XHTML compliance"
+      - "Wrote a time clock web app using Ruby on Rails"
   - company:
       contact:
         address:
@@ -93,8 +92,8 @@ experience:
           state: Texas
     title: Freelance Design and Development
     points:
-      - | Developed custom websites and WordPress themes
-      - | Designed print products for local bands, organizations, and businesses
+      - "Developed custom websites and WordPress themes"
+      - "Designed print products for local bands, organizations, and businesses"
   - company:
       name: Ball Corporation
       contact:
