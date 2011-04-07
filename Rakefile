@@ -28,8 +28,9 @@ task :publish, :branch do |t, args|
   branch[1] = branch[0] if branch.count == 1
   current_branch = `git branch | sed -n -e 's/^\* \(.*\)/\1/p'`
   `git checkout #{branch[0]}`
+  Rake::Task[:generate].invoke
   `cp output/#{@filename}.* .`
-  `mv #{@filename}.html index.html`
+  `cp #{@filename}.html index.html`
   `git checkout #{branch[1]}`
   `git add .`
   `git commit -m "Publish resume #{Time.now}"`
