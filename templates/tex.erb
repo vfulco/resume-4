@@ -26,8 +26,8 @@
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
   \LARGE
-    \textbf{\textsf{<%= @resume.particulars.name.join(' ').tx %>}}
-    \textrm{ \textit{<%= @resume.particulars.tagline.tx %>}}
+    \textbf{\textsf{<%= @resume.particulars.name.join(' ').le %>}}
+    \textrm{ \textit{<%= @resume.particulars.tagline.le %>}}
   }\bigskip\smallskip %\bigskip wasn't quite enough
 
 % Contact information box
@@ -36,9 +36,9 @@
 
   <% @contact = @resume.particulars.contact %>
   \begin{tabular}{l@{\hspace{.70in}}l@{\hspace{.4in}}|@{\hspace{.4in}}l@{\hspace{.50in}}l}
-    \textbf{\textsf{Address:}} & <%= @contact.address.street.tx %>  & \textbf{\textsf{Telephone:}}  & <%= @contact.telephone.tx %>               \\
-                      & <%= @contact.address.street2.tx %>                & \textbf{\textsf{E-mail:}}      & <%= @contact.email.tx %>            \\
-                      & <%= @contact.address.city.tx %>, <%= @contact.address.state.tx %> <%= @contact.address.zipcode.to_s.tx %>   & \textbf{\textsf{Website:}} & <%= @contact.websites.map{|w|w.tx}.join("#{/\\/.source} \& \& \& ") %>
+    \textbf{\textsf{Address:}} & <%= @contact.address.street.le %>  & \textbf{\textsf{Telephone:}}  & <%= @contact.telephone.le %>               \\
+                      & <%= @contact.address.street2.le %>                & \textbf{\textsf{E-mail:}}      & <%= @contact.email.le %>            \\
+                      & <%= @contact.address.city.le %>, <%= @contact.address.state.le %> <%= @contact.address.zipcode.le %>   & \textbf{\textsf{Website:}} & <%= @contact.websites.map{|w|w.le}.join("#{/\\/.source} \& \& \& ") %>
   \end{tabular}}
   \bigskip\widerule
 
