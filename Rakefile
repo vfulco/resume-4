@@ -23,6 +23,14 @@ task :clean do
   `rm output/*.*`
 end
 
+task :publish, :branch do |t, args|
+  `cp output/*.* .`
+  `mv #{@filename}.html index.html`
+  `git checkout #{args.branch}`
+  `git commit -m "Publish resume #{Time.now}"`
+  `git checkout $(current_branch)`
+end
+
 namespace :hooks do
   namespace :tex do
     task :before do
