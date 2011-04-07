@@ -1,8 +1,8 @@
 particulars:
   name:
-    first: Phillip
-    middle: Thomas
-    last: Ridlen
+    - Phillip
+    - Thomas
+    - Ridlen
   tagline: "Web & Software Developer"
   contact:
     address:
@@ -10,8 +10,8 @@ particulars:
       street2: Apartment 502
       city: Fort Worth
       state: Texas
-      zip: 76132
-    telephone: +16825579480
+      zipcode: 76132
+    telephone: "+16825579480"
     email: phillip@ridlen.net
     websites:
       - "http://phillipridlen.com"
