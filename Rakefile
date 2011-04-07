@@ -26,13 +26,15 @@ task :publish, :branch do |t, args|
   load_resume
   branch = args[:branch].split(':')
   branch[1] = branch[0] if branch.count == 1
+  current_branch = `git branch | sed -n -e 's/^\* \(.*\)/\1/p'`
+  `git checkout #{branch[0]}`
   `cp output/#{@filename}.* .`
   `mv #{@filename}.html index.html`
   `git checkout #{branch[1]}`
   `git add .`
   `git commit -m "Publish resume #{Time.now}"`
   `git push origin #{branch[1]}`
-  `git checkout #{branch[0]}`
+  `git checkout #{current_branch}`
 end
 
 namespace :hooks do
