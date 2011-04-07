@@ -61,8 +61,8 @@
 \section{\textsf{Relevant \\ Experience}}
 
               <% @resume.experience.each do |company| %>
-                \textbf{\textit{<%= company.name.le %>}
-                 at \textsc{Balcom Agency} in <%= company.contact.address.city.le %>, <%= company.contact.address.state.le %>\dotfill <%= company.date.start.year.le %>--<%= company.date.end.year.le %>}
+                \textbf{\textit{<%= company.title.le %>}
+                 at \textsc{<%= company.name.le %>} in <%= company.contact.address.city.le %>, <%= company.contact.address.state.le %>\dotfill <%= company.date.start.year.le %>--<%= company.date.end.year.le %>}
                  \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items <% company.points.each do |point| %>
                    \item <%= point.le %>
                  <% end %>\end{itemize}
