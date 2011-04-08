@@ -22,13 +22,11 @@ task :clean do
   `rm output/*.*`
 end
 
-task :publish, :branch do |t, args|
-  load_resume
-  branch = args[:branch].split(':')
-  branch[1] = branch[0] if branch.count == 1
-  `git checkout #{branch[0]}`
+task :publish do
+  publish_branch = 'gh-pages'
+  working_branch = 'master'
   Rake::Task[:generate].invoke
-  `git checkout #{branch[1]} && cp output/#{@filename}.* . && cp #{@filename}.html index.html &&  git add . && git commit -m "Publish resume #{Time.now}" && git push origin #{branch[1]} && git checkout #{branch[0]}`
+  `git checkout #{publish_branch} && cp output/#{@filename}.* . && cp #{@filename}.html index.html &&  git add . && git commit -m "Publish resume #{Time.now}" && git push origin #{publish_branch} && git checkout #{working_branch}`
 end
 
 namespace :hooks do
