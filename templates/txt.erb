@@ -7,3 +7,33 @@
   <%= @resume.particulars.contact.address.street2 %><br />
   <%= @resume.particulars.contact.address.city %>, <%= @resume.particulars.contact.address.state %> <%= @resume.particulars.contact.address.zipcode %><br />
   <%= @resume.particulars.contact.telephone %></h1>
+
+<h2>Skills<h2>
+<dl>
+<% @resume.skills.each do |category| %>
+  <dt><%= category.category %>:</dt>
+  <dd><%= category.skills.join(', ') %></dd>
+<% end %>
+</dl>
+
+<h2>Experience</h2>
+<dl>
+<% @resume.experience.each do |job| %>
+  <dt><%= job.title %> at <%= job.name %> in <%= job.contact.address.city %>, <%= job.contact.address.state %> (<%= job.date.start.year %> - <%= job.date.end.year %>)</dt>
+  <dd>
+    <ul>
+    <% job.points.each do |point| %>
+      <li><%= point %></li>
+    <% end %>
+    </ul>
+  </dd>
+<% end %>
+</dl>
+
+<h2>Endorsements</h2>
+<% @resume.endorsements.each do |endorsement| %>
+  <div>
+    <p>&ldquo;<%= endorsement.body %>&rdquo;</p>
+    <p>-- <%= endorsement.from.name %>, <%= endorsement.from.rel %>
+  </div>
+<% end %>
