@@ -47,7 +47,7 @@ namespace :hooks do
   namespace :txt do
     task :after do
       `cp output/#{@filename}.txt output/#{@filename}.htm`
-      `elinks -dump 1 -dump-width 40 output/#{@filename}.htm > output/#{@filename}.txt`
+      `elinks -dump 1 -dump-width 80 output/#{@filename}.htm > output/#{@filename}.txt`
       `rm output/#{@filename}.htm`
     end
   end
