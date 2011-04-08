@@ -25,6 +25,12 @@
     </header>
     <section id="skills">
       <h3>Skills</h3>
+      <dl>
+      <% @resume.skills.each do |category| %>
+        <dt><%= category.name %>:</dt>
+        <dd><%= category.skills.join(', ') %></dd>
+      <% end %>
+      </dl>
     </section>
     <section id="experience">
       <h3>Experience</h3>
