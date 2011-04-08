@@ -1,36 +1,38 @@
 <%# Yes, this is HTML. But it will get processed through lynx for formatting. %>
-
-<h1><%= @resume.particulars.name.join(' ')%><br />
-<%= @resume.particulars.tagline %></h1>
-
-<h1><%= @resume.particulars.contact.address.street %><br />
+<% divider_length = @resume.particulars.contact.address.street.length + 2 %>
+<h1>
+  <%= "=" * divider_length %><br />
+  <%= @resume.particulars.name.join(' ')%><br />
+  <%= @resume.particulars.tagline %><br />
+  <%= "-" * divider_length %><br />
+  <%= @resume.particulars.contact.address.street %><br />
   <%= @resume.particulars.contact.address.street2 %><br />
   <%= @resume.particulars.contact.address.city %>, <%= @resume.particulars.contact.address.state %> <%= @resume.particulars.contact.address.zipcode %><br />
-  <%= @resume.particulars.contact.telephone %></h1>
+  <%= @resume.particulars.contact.telephone %><br />
+  <%= "=" * divider_length %>
+</h1>
 
-<h2>Skills<h2>
-<dl>
+<h2>== Skills<h2>
+<ul>
 <% @resume.skills.each do |category| %>
-  <dt><%= category.category %>:</dt>
-  <dd><%= category.skills.join(', ') %></dd>
+  <li><b><%= category.category %>:</b> <%= category.skills.join(', ') %></li>
 <% end %>
-</dl>
+</ul>
 
-<h2>Experience</h2>
-<dl>
+<h2>== Experience</h2>
 <% @resume.experience.each do |job| %>
-  <dt><%= job.title %> at <%= job.name %> in <%= job.contact.address.city %>, <%= job.contact.address.state %> (<%= job.date.start.year %> - <%= job.date.end.year %>)</dt>
-  <dd>
-    <ul>
-    <% job.points.each do |point| %>
-      <li><%= point %></li>
-    <% end %>
-    </ul>
-  </dd>
+  <p>
+    <%= job.title %> at <%= job.name %><br />
+    <%= job.contact.address.city %>, <%= job.contact.address.state %> (<%= job.date.start.year %> - <%= job.date.end.year %>)
+  </p>
+  <ul>
+  <% job.points.each do |point| %>
+    <li><%= point %></li>
+  <% end %>
+  </ul>
 <% end %>
-</dl>
 
-<h2>Endorsements</h2>
+<h2>== Endorsements</h2>
 <% @resume.endorsements.each do |endorsement| %>
   <div>
     <p>&ldquo;<%= endorsement.body %>&rdquo;</p>
