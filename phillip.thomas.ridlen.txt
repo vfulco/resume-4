@@ -1,7 +1,55 @@
-         Phillip Thomas Ridlen
-        Web & Software Developer
+                        ===============================
+                             Phillip Thomas Ridlen
+                            Web & Software Developer
+                        -------------------------------
+                         5008 Lincoln Oaks Drive North
+                                 Apartment 502
+                            Fort Worth, Texas 76132
+                                  +16825579480
+                        ===============================
 
-     5008 Lincoln Oaks Drive North
-             Apartment 502
-        Fort Worth, Texas 76132
-              +16825579480
+== Skills
+
+  * General: Attention to detail, Fast learner, Good listener, Effective
+    communicator
+  * Development: Ruby/Rails, PHP, MySQL/PostgreSQL, Javascript/jQuery, Git
+  * Design: Photoshop, Illustrator, (X)HTML/CSS
+  * Office: Apple iWork, Microsoft Office, LaTeX, Typing Speed: 60-80 wpm
+
+== Experience
+
+   Interactive Developer at Balcom Agency
+   Fort Worth, Texas (2010 - 2011)
+
+     * Built, deployed, and maintained websites for clients using Ruby on
+       Rails and Drupal
+     * Designed a deployment infrastructure for Drupal websites
+     * Developed a website monitoring tool to notify us of unavailability
+
+   Web Guru at Diverse Suspension Technologies
+   Stephenville, Texas (2009 - 2010)
+
+     * Refreshed design of existing websites
+     * Ensured XHTML compliance
+     * Wrote a time clock web app using Ruby on Rails
+
+   Self-employed at Freelance Design and Development
+   Burleson, Texas (2003 - 2010)
+
+     * Developed custom websites and WordPress themes
+     * Designed print products for local bands, organizations, and businesses
+
+   OnForce Technician at Ball Corporation
+   Fort Worth, Texas (2007 - 2009)
+
+     * Provided effective PC troubleshooting
+     * Performed routine preventative maintenance on office desktop PCs
+
+== Endorsements
+
+   "Phillip is someone who carefully reads the customer and then provides the
+   expected service. Phillip is truly a man of great character. He puts his
+   heart into anything he does. He doesn't hesitate to seek advice to improve
+   himself and his approach to a service or product."
+
+   -- Gibby Espinoza, Customer
