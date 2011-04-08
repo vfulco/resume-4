@@ -27,16 +27,33 @@
       <h3>Skills</h3>
       <dl>
       <% @resume.skills.each do |category| %>
-        <dt><%= category.name %>:</dt>
+        <dt><%= category.category %>:</dt>
         <dd><%= category.skills.join(', ') %></dd>
       <% end %>
       </dl>
     </section>
     <section id="experience">
       <h3>Experience</h3>
+      <dl>
+      <% @resume.experience.each do |job| %>
+        <dt><%= job.title %> at <%= job.name %> in <%= job.contact.address.city %>, <%= job.contact.address.state %> (<%= job.date.start.year %> - <%= job.date.end.year %>)</dt>
+        <dd>
+          <ul>
+          <% job.points.each do |point| %>
+            <li><%= point %></li>
+          <% end %>
+          </ul>
+        </dd>
+      <% end %>
     </section>
     <section id="endorsements">
       <h3>Endorsements</h3>
+      <% @resume.endorsements.each do |endorsement| %>
+        <div class="endorsement">
+          <p class="body">&ldquo;<%= endorsement.body %>&rdquo;</p>
+          <p class="from">-- <%= endorsement.from.name %>, <%= endorsement.from.rel %>
+        </div>
+      <% end %>
     </section>
     <footer>
       <address>
