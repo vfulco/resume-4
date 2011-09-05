@@ -2,7 +2,6 @@
 \documentclass[margin]{res}
 
 % set up fonts
-\usepackage[LGR,T1]{fontenc}
 \usepackage{fontspec}
 \usepackage{pifont}
 \usepackage{xunicode}
@@ -10,8 +9,11 @@
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont{Proxima Nova}
 
+\usepackage{xcolor}
+\definecolor{MainColor}{rgb}{.33,.33,.33}
+\definecolor{HeaderColor}{rgb}{.148,.305,.348}
+
 \usepackage{setspace}
-\usepackage{url}
 
 \setlength{\textwidth}{5.1in} % set width of text portion
 
@@ -26,13 +28,14 @@
 
 \begin{document}
 \small
+\fontspec[Color=MainColor]{Proxima Nova}
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
   \fontsize{42}{42}
-    \setromanfont{Bello Pro}\textbf{<%= @resume.particulars.name.join(' ').le %>} \\
+    \fontspec[Color=HeaderColor]{Bello Pro}\textbf{<%= @resume.particulars.name.join(' ').le %>} \\
   \fontsize{20}{16} \smallskip \\
-    \setromanfont{Proxima Nova Thin}\textrm{<%= @resume.particulars.tagline.le %>}
-    \setromanfont{Proxima Nova}
+    \fontspec[Color=MainColor]{Proxima Nova Thin}<%= @resume.particulars.tagline.le %>
+    \fontspec[Color=MainColor]{Proxima Nova}
   }\sectionspace
 
 \begin{resume}
@@ -50,13 +53,15 @@
 
 \setstretch{1}
 
-\section{Skills}
+\section{\fontspec[Color=MainColor]{Proxima Nova}
+Skills}
 
               <% @resume.skills.each do |category| %>
                 \textbf{<%= category.category.le %>:} <%= category.skills.join(', ').le %>  <%= /\\/.source unless category == @resume.skills.last %><% end %>
 \sectionspace
 
-\section{Education}
+\section{\fontspec[Color=MainColor]{Proxima Nova}
+Education}
               <% @resume.education.each do |ed| %>
                 \textbf{<%= ed.degree.type %> in <%= ed.degree.major %> \dotfill <%= ed.degree.conferred %> }  \\
                 <%= "Minor in #{ed.degree.minor}" if ed.degree.minor %><%= "Emphasis in #{ed.degree.emphasis}" if ed.degree.emphasis %> \hfill  \textsc{<%= ed.school %>}
@@ -64,7 +69,8 @@
 \sectionspace
 
 
-\section{Relevant \\ Experience}
+\section{\fontspec[Color=MainColor]{Proxima Nova}
+Relevant \\ Experience}
 
               <% @resume.experience.each do |company| %>
                 \textbf{<%= company.title.le %>
@@ -77,7 +83,8 @@
 \sectionspace
 
 
-\section{Endorsements}
+\section{\fontspec[Color=MainColor]{Proxima Nova}
+Endorsements}
 
               <% @resume.endorsements.each do |endorsement| %>
                 ``<%= endorsement.body.le %>''                    \\
