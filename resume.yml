@@ -7,7 +7,7 @@ particulars:
   contact:
     address:
       street: 5008 Lincoln Oaks Drive North
-      street2: Apartment 502
+      street2: Apartment No. 502
       city: Fort Worth
       state: Texas
       zipcode: 76132
@@ -18,12 +18,6 @@ particulars:
       - "http://github.com/philtr"
 
 skills:
-  - category: General
-    skills:
-      - Attention to detail
-      - Fast learner
-      - Good listener
-      - Effective communicator
   - category: Development
     skills:
       - Ruby/Rails
@@ -33,9 +27,10 @@ skills:
       - Git
   - category: Design
     skills:
+      - HTML
+      - CSS
       - Photoshop
       - Illustrator
-      - (X)HTML/CSS
   - category: Office
     skills:
       - Apple iWork
@@ -89,7 +84,7 @@ experience:
   - name: Diverse Suspension Technologies
     contact:
       address:
-        city: Stephenville
+        city: Burleson
         state: Texas
     title: Web Guru
     points:
