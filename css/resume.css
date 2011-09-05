@@ -1,0 +1,54 @@
+html { background-color: #f0f0f0; }
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: "proxima-nova-1","proxima-nova-2","Proxima Nova",sans-serif;
+  font-size: 14px;
+  width: 800px;
+  margin: 0 auto;
+  padding: 25px 50px; }
+section {
+  margin-left: 175px; 
+  margin-bottom: 2em;
+  clear: left; }
+  section h3 { 
+    position: relative; 
+    left: -175px;
+    margin: 0;
+    float: left;
+    width: 0; }
+h1 {
+  color: #264E59;
+  font-family: "bello-pro-1","bello-pro-2","Bello Pro",sans-serif;
+  font-size: 60px;
+  margin-bottom: 0; }
+h2 {
+  font-weight: 100;
+  font-size: 32px;
+  margin: 0 0 1em 0; }
+a {
+  text-decoration: none;
+  color: #264E59; }
+  a:hover { color: #3A7878; }
+address {
+  font-style: normal; }
+dt { font-weight: bold; }
+footer {
+  margin-top: 6em;
+  font-size: 12px;}
+footer .divider { 
+  color: #ccc;
+  padding: 0 .75em; }
+
+#contact { 
+  float: left;
+  margin: 0 0 0 0;
+  padding: 0 0 2em 0; }
+  #contact h3 { display: none; }
+  #contact address p {
+    float: left;
+    margin-right: 60px; }
+#skills dt {
+  display: inline-block;
+  float: left;
+  margin-right: .5em; }
