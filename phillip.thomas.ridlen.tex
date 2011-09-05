@@ -2,16 +2,16 @@
 \documentclass[margin]{res}
 
 % set up fonts
-\usepackage[LGR,T1]{fontenc}
 \usepackage{fontspec}
 \usepackage{pifont}
-\usepackage{xunicode}
-\usepackage{xltxtra}
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont{Proxima Nova}
 
+\usepackage{xcolor}
+\definecolor{MainColor}{rgb}{.33,.33,.33}
+\definecolor{HeaderColor}{rgb}{.148,.305,.348}
+
 \usepackage{setspace}
-\usepackage{url}
 
 \setlength{\textwidth}{5.1in} % set width of text portion
 
@@ -26,13 +26,14 @@
 
 \begin{document}
 \small
+\fontspec[Color=MainColor]{Proxima Nova}
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
   \fontsize{42}{42}
-    \setromanfont{Bello Pro}\textbf{Phillip Thomas Ridlen} \\
+    \fontspec[Color=HeaderColor]{Bello Pro}\textbf{Phillip Thomas Ridlen} \\
   \fontsize{20}{16} \smallskip \\
-    \setromanfont{Proxima Nova Thin}\textrm{Web \& Software Developer}
-    \setromanfont{Proxima Nova}
+    \fontspec[Color=MainColor]{Proxima Nova Thin}Web \& Software Developer
+    \fontspec[Color=MainColor]{Proxima Nova}
   }\sectionspace
 
 \begin{resume}
@@ -50,7 +51,8 @@
 
 \setstretch{1}
 
-\section{Skills}
+\section{\fontspec[Color=MainColor]{Proxima Nova}
+Skills}
 
               
                 \textbf{Development:} Ruby/Rails, PHP, MySQL/PostgreSQL, Javascript/jQuery, Git  \\
@@ -58,7 +60,8 @@
                 \textbf{Office:} Apple iWork, Microsoft Office, \LaTeX, Typing Speed: 60-80 wpm  
 \sectionspace
 
-\section{Education}
+\section{\fontspec[Color=MainColor]{Proxima Nova}
+Education}
               
                 \textbf{Bachelor of Science in Software Engineering \dotfill May 2010 }  \\
                 Minor in Mathematics \hfill  \textsc{The University of Texas at Arlington}
@@ -69,7 +72,8 @@
 \sectionspace
 
 
-\section{Relevant \\ Experience}
+\section{\fontspec[Color=MainColor]{Proxima Nova}
+Relevant \\ Experience}
 
               
                 \textbf{Interactive Developer
@@ -112,7 +116,8 @@
 \sectionspace
 
 
-\section{Endorsements}
+\section{\fontspec[Color=MainColor]{Proxima Nova}
+Endorsements}
 
               
                 ``Phillip is someone who carefully reads the customer and then provides the
