@@ -35,7 +35,7 @@ namespace :hooks do
       wget "https://github.com/philtr/resume/raw/gh-pages/rpi/res.cls", "./output/res.cls"
     end
     task :after do
-      `cd ./output && pdflatex #{@filename}.tex`
+      `cd ./output && xelatex #{@filename}.tex`
       `rm ./output/res.cls`
       `rm ./output/#{@filename}.log`
     end
