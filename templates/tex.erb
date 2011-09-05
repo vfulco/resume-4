@@ -4,9 +4,14 @@
 % set up fonts
 \usepackage[LGR,T1]{fontenc}
 \usepackage{fontspec}
-\setromanfont{Proxima Nova}
+\usepackage{pifont}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Proxima Nova}
 
 \usepackage{setspace}
+\usepackage{url}
 
 \setlength{\textwidth}{5.1in} % set width of text portion
 
@@ -16,37 +21,39 @@
 
 % DRY
 \newcommand{\widerule}{\moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}}
-\newcommand{\sectionspace}{\vspace{8pt}}
+\newcommand{\sectionspace}{\vspace{10pt}}
 \renewcommand{\labelitemi}{\scriptsize\ding{93}}
 
 \begin{document}
 \small
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
-  \Huge
-    \textbf{<%= @resume.particulars.name.join(' ').le %>} \\
-  \LARGE
-    \textrm{<%= @resume.particulars.tagline.le %>}
-  }\bigskip\smallskip %\bigskip wasn't quite enough
+  \fontsize{42}{42}
+    \setromanfont{Bello Pro}\textbf{<%= @resume.particulars.name.join(' ').le %>} \\
+  \fontsize{20}{16} \smallskip \\
+    \setromanfont{Proxima Nova Thin}\textrm{<%= @resume.particulars.tagline.le %>}
+    \setromanfont{Proxima Nova}
+  }\sectionspace
+
+\begin{resume}
+\linespread{1.3}
 
 % Contact information box
- \bigskip
  \moveleft1.06\hoffset\vbox{
 
   <% @contact = @resume.particulars.contact %>
-  \begin{tabular}{l@{\hspace{.80in}}l@{\hspace{.8in}}l@{\hspace{.4in}}l@{\hspace{.50in}}l}
+  \begin{tabular}{l@{\hspace{.80in}}l@{\hspace{.7in}}l@{\hspace{.8in}}l@{\hspace{.50in}}l}
     \textbf{Address:} & <%= @contact.address.street.le %>  & \textbf{Telephone:}  & <%= @contact.telephone.le %>               \\
-                      & <%= @contact.address.street2.le %>                & \textbf{E-mail:}      & <%= @contact.email.le %>            \\
+                      & <%= @contact.address.street2.le %>                & \textbf{Email:}      & <%= @contact.email.le %>            \\
                       & <%= @contact.address.city.le %>, <%= @contact.address.state.le %> <%= @contact.address.zipcode.le %>   & \textbf{Website:} & <%= @contact.websites.map{|w|w.le}.join("#{/\\/.source} \& \& \& ") %>
   \end{tabular}}
-  \bigskip
 
-\begin{resume}\setstretch{1}
+\setstretch{1}
 
 \section{Skills}
 
               <% @resume.skills.each do |category| %>
-                \textbf{<%= category.category.le %>:} <%= category.skills.join(', ').le %>  \\<% end %>
+                \textbf{<%= category.category.le %>:} <%= category.skills.join(', ').le %>  <%= /\\/.source unless category == @resume.skills.last %><% end %>
 \sectionspace
 
 \section{Education}
@@ -61,7 +68,7 @@
 
               <% @resume.experience.each do |company| %>
                 \textbf{<%= company.title.le %>
-                 at \textsc{<%= company.name.le %>} in <%= company.contact.address.city.le %>, <%= company.contact.address.state.le %>\dotfill <%= company.date.start.year.le %>--<%= company.date.end.year.le %>}
+                 at <%= company.name.le %> in <%= company.contact.address.city.le %>, <%= company.contact.address.state.le %>\dotfill <%= company.date.start.year.le %>--<%= company.date.end.year.le %>}
                  \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items <% company.points.each do |point| %>
                    \item <%= point.le %>
                  <% end %>\end{itemize}

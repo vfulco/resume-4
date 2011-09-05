@@ -1,5 +1,54 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title><%= @resume.particulars.name.join(' ') %> | R&eacute;sum&eacute;</title>
+    <script src="http://use.typekit.com/cak6cdh.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <style>
+      body { 
+        background-color: #fff;
+        color: #555;
+        font-family: "proxima-nova-1","proxima-nova-2",sans-serif;
+        font-size: 14px;
+        width: 800px;
+        margin: 0 auto;
+        padding: 50px; }
+      section {
+        margin-left: 200px; 
+        margin-bottom: 2em; }
+        section h3 { 
+          position: relative; 
+          left: -200px; 
+          margin: 0; 
+          float: left; 
+          width: 0; }
+      h1 {
+        color: #264E59;
+        font-family: "bello-pro-1","bello-pro-2",sans-serif;
+        font-size: 60px;
+        margin-bottom: 0; }
+      h2 {
+        font-weight: 100;
+        margin: 0 0 1em 0; }
+      a {
+        text-decoration: none;
+        color: #264E59; }
+        a:hover { color: #3A7878; }
+      address {
+        font-style: normal; }
+      #skills dt {
+        display: inline-block;
+        float: left;
+        margin-right: .5em; }
+      dt { font-weight: bold; }
+      footer { 
+        margin-top: 6em;
+        font-size: 12px;}
+      footer .divider { 
+        color: #ccc;
+        padding: 0 1em; }
+    </style>
+  </head>
   <body>
     <header>
       <h1><%= @resume.particulars.name.join(' ') %></h1>
@@ -58,9 +107,9 @@
     </section>
     <footer>
       <address>
-        <%= @resume.particulars.name.join(' ') %> |
-        <%= @resume.particulars.contact.telephone %> |
-        <a href="mailto:<%= @resume.particulars.contact.email %>"><%= @resume.particulars.contact.email %></a> |
+        <%= @resume.particulars.name.join(' ') %> <span class="divider">|</span>
+        <%= @resume.particulars.contact.telephone %> <span class="divider">|</span>
+        <a href="mailto:<%= @resume.particulars.contact.email %>"><%= @resume.particulars.contact.email %></a> <span class="divider">|</span>
         <a href="<%= @resume.particulars.contact.websites.first %>"><%= @resume.particulars.contact.websites.first %></a>
       </address>
     </footer>
