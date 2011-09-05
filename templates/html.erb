@@ -111,7 +111,8 @@
         <%= @resume.particulars.name.join(' ') %> <span class="divider">|</span>
         <%= @resume.particulars.contact.telephone %> <span class="divider">|</span>
         <a href="mailto:<%= @resume.particulars.contact.email %>"><%= @resume.particulars.contact.email %></a> <span class="divider">|</span>
-        <a href="<%= @resume.particulars.contact.websites.first %>"><%= @resume.particulars.contact.websites.first %></a>
+        <a href="<%= @resume.particulars.contact.websites.first %>"><%= @resume.particulars.contact.websites.first %></a> <span class="divider">|</span>
+        <a href="<%= @resume.particulars.name.join('.').downcase %>.pdf">Download PDF Version</a>
       </address>
     </footer>
   </body>
