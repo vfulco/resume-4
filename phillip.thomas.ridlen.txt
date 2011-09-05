@@ -3,17 +3,15 @@
                             Web & Software Developer
                         -------------------------------
                          5008 Lincoln Oaks Drive North
-                                 Apartment 502
+                               Apartment No. 502
                             Fort Worth, Texas 76132
                                   +16825579480
                         ===============================
 
 == Skills
 
-  * General: Attention to detail, Fast learner, Good listener, Effective
-    communicator
   * Development: Ruby/Rails, PHP, MySQL/PostgreSQL, Javascript/jQuery, Git
-  * Design: Photoshop, Illustrator, (X)HTML/CSS
+  * Design: HTML, CSS, Photoshop, Illustrator
   * Office: Apple iWork, Microsoft Office, LaTeX, Typing Speed: 60-80 wpm
 
 == Experience
@@ -27,7 +25,7 @@
      * Developed a website monitoring tool to notify us of unavailability
 
    Web Guru at Diverse Suspension Technologies
-   Stephenville, Texas (2009 - 2010)
+   Burleson, Texas (2009 - 2010)
 
      * Refreshed design of existing websites
      * Ensured XHTML compliance

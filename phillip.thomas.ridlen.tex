@@ -3,12 +3,15 @@
 
 % set up fonts
 \usepackage[LGR,T1]{fontenc}
-\usepackage{helvetica}
-% \usepackage{tgheros} % if helvetica.sty is not available
-\usepackage{tgpagella}
+\usepackage{fontspec}
 \usepackage{pifont}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Proxima Nova}
 
 \usepackage{setspace}
+\usepackage{url}
 
 \setlength{\textwidth}{5.1in} % set width of text portion
 
@@ -18,57 +21,59 @@
 
 % DRY
 \newcommand{\widerule}{\moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}}
-\newcommand{\sectionspace}{\vspace{8pt}}
+\newcommand{\sectionspace}{\vspace{10pt}}
 \renewcommand{\labelitemi}{\scriptsize\ding{93}}
 
 \begin{document}
 \small
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
-  \LARGE
-    \textbf{\textsf{Phillip Thomas Ridlen}}
-    \textrm{ \textit{Web \& Software Developer}}
-  }\bigskip\smallskip %\bigskip wasn't quite enough
+  \fontsize{42}{42}
+    \setromanfont{Bello Pro}\textbf{Phillip Thomas Ridlen} \\
+  \fontsize{20}{16} \smallskip \\
+    \setromanfont{Proxima Nova Thin}\textrm{Web \& Software Developer}
+    \setromanfont{Proxima Nova}
+  }\sectionspace
+
+\begin{resume}
+\linespread{1.3}
 
 % Contact information box
- \widerule\bigskip
  \moveleft1.06\hoffset\vbox{
 
   
-  \begin{tabular}{l@{\hspace{.70in}}l@{\hspace{.4in}}|@{\hspace{.4in}}l@{\hspace{.50in}}l}
-    \textbf{\textsf{Address:}} & 5008 Lincoln Oaks Drive North  & \textbf{\textsf{Telephone:}}  & +16825579480               \\
-                      & Apartment 502                & \textbf{\textsf{E-mail:}}      & phillip@ridlen.net            \\
-                      & Fort Worth, Texas 76132   & \textbf{\textsf{Website:}} & http://phillipridlen.com\\ & & & http://github.com/philtr
+  \begin{tabular}{l@{\hspace{.80in}}l@{\hspace{.7in}}l@{\hspace{.8in}}l@{\hspace{.50in}}l}
+    \textbf{Address:} & 5008 Lincoln Oaks Drive North  & \textbf{Telephone:}  & +16825579480               \\
+                      & Apartment No. 502                & \textbf{Email:}      & phillip@ridlen.net            \\
+                      & Fort Worth, Texas 76132   & \textbf{Website:} & http://phillipridlen.com\\ & & & http://github.com/philtr
   \end{tabular}}
-  \bigskip\widerule
 
-\begin{resume}\setstretch{1}
+\setstretch{1}
 
-\section{\textsf{Skills}}
+\section{Skills}
 
               
-                \textbf{\textit{General:}} Attention to detail, Fast learner, Good listener, Effective communicator  \\
-                \textbf{\textit{Development:}} Ruby/Rails, PHP, MySQL/PostgreSQL, Javascript/jQuery, Git  \\
-                \textbf{\textit{Design:}} Photoshop, Illustrator, (X)HTML/CSS  \\
-                \textbf{\textit{Office:}} Apple iWork, Microsoft Office, \LaTeX, Typing Speed: 60-80 wpm  \\
+                \textbf{Development:} Ruby/Rails, PHP, MySQL/PostgreSQL, Javascript/jQuery, Git  \\
+                \textbf{Design:} HTML, CSS, Photoshop, Illustrator  \\
+                \textbf{Office:} Apple iWork, Microsoft Office, \LaTeX, Typing Speed: 60-80 wpm  
 \sectionspace
 
-\section{\textsf{Education}}
+\section{Education}
               
-                \textbf{\textit{Bachelor of Science} in Software Engineering \dotfill May 2010 }  \\
+                \textbf{Bachelor of Science in Software Engineering \dotfill May 2010 }  \\
                 Minor in Mathematics \hfill  \textsc{The University of Texas at Arlington}
               
-                \textbf{\textit{Certificate} in Biblical Studies \dotfill May 2006 }  \\
+                \textbf{Certificate in Biblical Studies \dotfill May 2006 }  \\
                 Emphasis in Computer Information Systems \hfill  \textsc{Emmaus Bible College}
               
 \sectionspace
 
 
-\section{\textsf{Relevant \\ Experience}}
+\section{Relevant \\ Experience}
 
               
-                \textbf{\textit{Interactive Developer}
-                 at \textsc{Balcom Agency} in Fort Worth, Texas\dotfill 2010--2011}
+                \textbf{Interactive Developer
+                 at Balcom Agency in Fort Worth, Texas\dotfill 2010--2011}
                  \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
                    \item Built, deployed, and maintained websites for clients using Ruby on Rails and Drupal
                  
@@ -77,8 +82,8 @@
                    \item Developed a website monitoring tool to notify us of unavailability
                  \end{itemize}
               
-                \textbf{\textit{Web Guru}
-                 at \textsc{Diverse Suspension Technologies} in Stephenville, Texas\dotfill 2009--2010}
+                \textbf{Web Guru
+                 at Diverse Suspension Technologies in Burleson, Texas\dotfill 2009--2010}
                  \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
                    \item Refreshed design of existing websites
                  
@@ -87,16 +92,16 @@
                    \item Wrote a time clock web app using Ruby on Rails
                  \end{itemize}
               
-                \textbf{\textit{Self-employed}
-                 at \textsc{Freelance Design and Development} in Burleson, Texas\dotfill 2003--2010}
+                \textbf{Self-employed
+                 at Freelance Design and Development in Burleson, Texas\dotfill 2003--2010}
                  \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
                    \item Developed custom websites and WordPress themes
                  
                    \item Designed print products for local bands, organizations, and businesses
                  \end{itemize}
               
-                \textbf{\textit{OnForce Technician}
-                 at \textsc{Ball Corporation} in Fort Worth, Texas\dotfill 2007--2009}
+                \textbf{OnForce Technician
+                 at Ball Corporation in Fort Worth, Texas\dotfill 2007--2009}
                  \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
                    \item Provided effective PC troubleshooting
                  
@@ -107,14 +112,14 @@
 \sectionspace
 
 
-\section{\textsf{Endorsements}}
+\section{Endorsements}
 
               
                 ``Phillip is someone who carefully reads the customer and then provides the
 expected service. Phillip is truly a man of great character. He puts his
 heart into anything he does. He doesn't hesitate to seek advice to improve
 himself and his approach to a service or product.''                    \\
-                \textit{-- Gibby Espinoza,} Customer
+                -- Gibby Espinoza, Customer
               
 
 \sectionspace
@@ -123,7 +128,7 @@ himself and his approach to a service or product.''                    \\
 \sectionspace
 
 
-\textit{\textbf{\footnotesize Contact information for personal and professional references is available upon request.}}
+\textbf{\footnotesize Contact information for personal and professional references is available upon request.}
 
 
 \end{resume}
