@@ -3,10 +3,8 @@
 
 % set up fonts
 \usepackage[LGR,T1]{fontenc}
-\usepackage{helvetica}
-% \usepackage{tgheros} % if helvetica.sty is not available
-\usepackage{tgpagella}
-\usepackage{pifont}
+\usepackage{fontspec}
+\setromanfont{Proxima Nova}
 
 \usepackage{setspace}
 
@@ -25,43 +23,44 @@
 \small
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
+  \Huge
+    \textbf{<%= @resume.particulars.name.join(' ').le %>} \\
   \LARGE
-    \textbf{\textsf{<%= @resume.particulars.name.join(' ').le %>}}
-    \textrm{ \textit{<%= @resume.particulars.tagline.le %>}}
+    \textrm{<%= @resume.particulars.tagline.le %>}
   }\bigskip\smallskip %\bigskip wasn't quite enough
 
 % Contact information box
- \widerule\bigskip
+ \bigskip
  \moveleft1.06\hoffset\vbox{
 
   <% @contact = @resume.particulars.contact %>
-  \begin{tabular}{l@{\hspace{.70in}}l@{\hspace{.4in}}|@{\hspace{.4in}}l@{\hspace{.50in}}l}
-    \textbf{\textsf{Address:}} & <%= @contact.address.street.le %>  & \textbf{\textsf{Telephone:}}  & <%= @contact.telephone.le %>               \\
-                      & <%= @contact.address.street2.le %>                & \textbf{\textsf{E-mail:}}      & <%= @contact.email.le %>            \\
-                      & <%= @contact.address.city.le %>, <%= @contact.address.state.le %> <%= @contact.address.zipcode.le %>   & \textbf{\textsf{Website:}} & <%= @contact.websites.map{|w|w.le}.join("#{/\\/.source} \& \& \& ") %>
+  \begin{tabular}{l@{\hspace{.80in}}l@{\hspace{.8in}}l@{\hspace{.4in}}l@{\hspace{.50in}}l}
+    \textbf{Address:} & <%= @contact.address.street.le %>  & \textbf{Telephone:}  & <%= @contact.telephone.le %>               \\
+                      & <%= @contact.address.street2.le %>                & \textbf{E-mail:}      & <%= @contact.email.le %>            \\
+                      & <%= @contact.address.city.le %>, <%= @contact.address.state.le %> <%= @contact.address.zipcode.le %>   & \textbf{Website:} & <%= @contact.websites.map{|w|w.le}.join("#{/\\/.source} \& \& \& ") %>
   \end{tabular}}
-  \bigskip\widerule
+  \bigskip
 
 \begin{resume}\setstretch{1}
 
-\section{\textsf{Skills}}
+\section{Skills}
 
               <% @resume.skills.each do |category| %>
-                \textbf{\textit{<%= category.category.le %>:}} <%= category.skills.join(', ').le %>  \\<% end %>
+                \textbf{<%= category.category.le %>:} <%= category.skills.join(', ').le %>  \\<% end %>
 \sectionspace
 
-\section{\textsf{Education}}
+\section{Education}
               <% @resume.education.each do |ed| %>
-                \textbf{\textit{<%= ed.degree.type %>} in <%= ed.degree.major %> \dotfill <%= ed.degree.conferred %> }  \\
+                \textbf{<%= ed.degree.type %> in <%= ed.degree.major %> \dotfill <%= ed.degree.conferred %> }  \\
                 <%= "Minor in #{ed.degree.minor}" if ed.degree.minor %><%= "Emphasis in #{ed.degree.emphasis}" if ed.degree.emphasis %> \hfill  \textsc{<%= ed.school %>}
               <% end %>
 \sectionspace
 
 
-\section{\textsf{Relevant \\ Experience}}
+\section{Relevant \\ Experience}
 
               <% @resume.experience.each do |company| %>
-                \textbf{\textit{<%= company.title.le %>}
+                \textbf{<%= company.title.le %>
                  at \textsc{<%= company.name.le %>} in <%= company.contact.address.city.le %>, <%= company.contact.address.state.le %>\dotfill <%= company.date.start.year.le %>--<%= company.date.end.year.le %>}
                  \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items <% company.points.each do |point| %>
                    \item <%= point.le %>
@@ -71,11 +70,11 @@
 \sectionspace
 
 
-\section{\textsf{Endorsements}}
+\section{Endorsements}
 
               <% @resume.endorsements.each do |endorsement| %>
                 ``<%= endorsement.body.le %>''                    \\
-                \textit{-- <%= endorsement.from.name.le %>,} <%= endorsement.from.rel.le %>
+                -- <%= endorsement.from.name.le %>, <%= endorsement.from.rel.le %>
               <% end %>
 
 \sectionspace
@@ -84,7 +83,7 @@
 \sectionspace
 
 
-\textit{\textbf{\footnotesize Contact information for personal and professional references is available upon request.}}
+\textbf{\footnotesize Contact information for personal and professional references is available upon request.}
 
 
 \end{resume}

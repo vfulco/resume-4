@@ -32,12 +32,10 @@ end
 namespace :hooks do
   namespace :tex do
     task :before do
-      wget "https://github.com/philtr/resume/raw/gh-pages/rpi/helvetica.sty", "./output/helvetica.sty"
       wget "https://github.com/philtr/resume/raw/gh-pages/rpi/res.cls", "./output/res.cls"
     end
     task :after do
       `cd ./output && pdflatex #{@filename}.tex`
-      `rm ./output/helvetica.sty`
       `rm ./output/res.cls`
       `rm ./output/#{@filename}.log`
     end
