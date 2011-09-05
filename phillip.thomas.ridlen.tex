@@ -20,9 +20,13 @@
 
 
 % DRY
-\newcommand{\widerule}{\moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}}
+\newcommand{\widerule}{
+  \moveleft\hoffset\vbox{
+    \hrule width\resumewidth height 0.1pt
+  }
+}
 \newcommand{\sectionspace}{\vspace{10pt}}
-\renewcommand{\labelitemi}{\scriptsize\ding{93}}
+\renewcommand{\labelitemi}{\fontspec[Color=HeaderColor]\scriptsize\ding{93}}
 
 \begin{document}
 \small
@@ -30,38 +34,48 @@
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
   \fontsize{42}{42}
-    \fontspec[Color=HeaderColor]{Bello Pro}\textbf{Phillip Thomas Ridlen} \\
-  \fontsize{20}{16} \smallskip \\
-    \fontspec[Color=MainColor]{Proxima Nova Thin}Web \& Software Developer
+    \fontspec[Color=HeaderColor]{Bello Pro}\textbf{
+      Phillip Thomas Ridlen
+     } \\
+  \fontsize{20}{20} \smallskip \\
+    \fontspec[Color=MainColor]{Proxima Nova Thin}
+    Web \& Software Developer
     \fontspec[Color=MainColor]{Proxima Nova}
   }\sectionspace
 
 \begin{resume}
-\linespread{1.3}
 
 % Contact information box
  \moveleft1.06\hoffset\vbox{
 
   
   \begin{tabular}{l@{\hspace{.80in}}l@{\hspace{.7in}}l@{\hspace{.8in}}l@{\hspace{.50in}}l}
-    \textbf{Address:} & 5008 Lincoln Oaks Drive North  & \textbf{Telephone:}  & +16825579480               \\
-                      & Apartment No. 502                & \textbf{Email:}      & phillip@ridlen.net            \\
-                      & Fort Worth, Texas 76132   & \textbf{Website:} & http://phillipridlen.com\\ & & & http://github.com/philtr
+    \textbf{Address:} & 5008 Lincoln Oaks Drive North  & \textbf{Telephone:} & +16825579480 \\
+                      & Apartment No. 502 & \textbf{Email:}     & phillip@ridlen.net     \\
+                      & Fort Worth, Texas 76132 &
+                        \textbf{Website:} & http://phillipridlen.com\\ & & & http://github.com/philtr
   \end{tabular}}
 
-\setstretch{1}
-
 \section{\fontspec[Color=MainColor]{Proxima Nova}
-Skills}
+  Skills
+}
 
               
-                \textbf{Development:} Ruby/Rails, PHP, MySQL/PostgreSQL, Javascript/jQuery, Git  \\
-                \textbf{Design:} HTML, CSS, Photoshop, Illustrator  \\
-                \textbf{Office:} Apple iWork, Microsoft Office, \LaTeX, Typing Speed: 60-80 wpm  
+                \textbf{Development:}
+                  Ruby/Rails, PHP, MySQL/PostgreSQL, Javascript/jQuery, Git \\
+              
+                \textbf{Design:}
+                  HTML, CSS, Photoshop, Illustrator \\
+              
+                \textbf{Office:}
+                  Apple iWork, Microsoft Office, \LaTeX, Typing Speed: 60-80 wpm 
+              
+              
 \sectionspace
 
 \section{\fontspec[Color=MainColor]{Proxima Nova}
-Education}
+  Education
+}
               
                 \textbf{Bachelor of Science in Software Engineering \dotfill May 2010 }  \\
                 Minor in Mathematics \hfill  \textsc{The University of Texas at Arlington}
@@ -73,7 +87,8 @@ Education}
 
 
 \section{\fontspec[Color=MainColor]{Proxima Nova}
-Relevant \\ Experience}
+  Relevant \\ Experience
+}
 
               
                 \textbf{Interactive Developer
@@ -117,7 +132,8 @@ Relevant \\ Experience}
 
 
 \section{\fontspec[Color=MainColor]{Proxima Nova}
-Endorsements}
+  Endorsements
+}
 
               
                 ``Phillip is someone who carefully reads the customer and then provides the
@@ -133,7 +149,10 @@ himself and his approach to a service or product.''                    \\
 \sectionspace
 
 
-\textbf{\footnotesize Contact information for personal and professional references is available upon request.}
+\textbf{\footnotesize
+  Contact information for personal and professional references is available upon
+  request.
+}
 
 
 \end{resume}
