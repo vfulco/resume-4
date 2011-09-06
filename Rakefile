@@ -33,12 +33,10 @@ namespace :hooks do
   namespace :tex do
     task :before do
       wget "https://github.com/philtr/resume/raw/gh-pages/rpi/res.cls", "./output/res.cls"
-      wget "http://www.tug.org/texlive/Contents/live/texmf-dist/tex/latex/expl3/l3luatex.sty", "./output/l3luatex.sty"
     end
     task :after do
       `cd ./output && xelatex #{@filename}.tex`
       `rm ./output/res.cls`
-      `rm ./output/l3luatex.sty`
       `rm ./output/#{@filename}.log`
     end
   end
