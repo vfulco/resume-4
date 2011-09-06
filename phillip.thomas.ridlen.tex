@@ -10,6 +10,7 @@
 \usepackage{xcolor}
 \definecolor{MainColor}{rgb}{.33,.33,.33}
 \definecolor{HeaderColor}{rgb}{.148,.305,.348}
+\definecolor{LineColor}{rgb}{.97,.97,.97}
 
 \usepackage{setspace}
 
@@ -22,11 +23,11 @@
 % DRY
 \newcommand{\widerule}{
   \moveleft\hoffset\vbox{
-    \hrule width\resumewidth height 0.1pt
+    \textcolor{LineColor}{\hrule width\resumewidth height 0.1pt}
   }
 }
 \newcommand{\sectionspace}{\vspace{10pt}}
-\renewcommand{\labelitemi}{\fontspec[Color=HeaderColor]\scriptsize\ding{93}}
+\renewcommand{\labelitemi}{\scriptsize\ding{93}}
 
 \begin{document}
 \small
@@ -34,71 +35,63 @@
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
   \fontsize{42}{42}
-    \fontspec[Color=HeaderColor]{Bello Pro}\textbf{
-      Phillip Thomas Ridlen
-     } \\
-  \fontsize{20}{20} \smallskip \\
-    \fontspec[Color=MainColor]{Proxima Nova Thin}
-    Web \& Software Developer
+    \fontspec[Color=HeaderColor]{Bello Pro}\textbf{Phillip Thomas Ridlen} \\
+  \fontsize{20}{16} \smallskip \\
+    \fontspec[Color=MainColor]{Proxima Nova Thin}Web Developer \& Software Engineer
     \fontspec[Color=MainColor]{Proxima Nova}
   }\sectionspace
 
 \begin{resume}
 
 % Contact information box
- \moveleft1.06\hoffset\vbox{
-
+ \moveleft1.12\hoffset\vbox{\colorbox{LineColor}{
   
   \begin{tabular}{l@{\hspace{.80in}}l@{\hspace{.7in}}l@{\hspace{.8in}}l@{\hspace{.50in}}l}
-    \textbf{Address:} & 5008 Lincoln Oaks Drive North  & \textbf{Telephone:} & +16825579480 \\
-                      & Apartment No. 502 & \textbf{Email:}     & phillip@ridlen.net     \\
-                      & Fort Worth, Texas 76132 &
-                        \textbf{Website:} & http://phillipridlen.com\\ & & & http://github.com/philtr
-  \end{tabular}}
+    & & & & \\
+    \textbf{Address:} & 5008 Lincoln Oaks Drive North  & \textbf{Telephone:}  & +1 (682) 557-9480               \\
+                      & Apartment No. 502                & \textbf{Email:}      & phillip@ridlen.net            \\
+                      & Fort Worth, Texas 76132   & \textbf{Website:} & http://phillipridlen.com \\
+  & & & &
+  \end{tabular}}}
+
+
+\setstretch{1}
 
 \section{\fontspec[Color=MainColor]{Proxima Nova}
-  Skills
-}
+Skills}
 
               
-                \textbf{Development:}
-                  Ruby/Rails, PHP, MySQL/PostgreSQL, Javascript/jQuery, Git \\
-              
-                \textbf{Design:}
-                  HTML, CSS, Photoshop, Illustrator \\
-              
-                \textbf{Office:}
-                  Apple iWork, Microsoft Office, \LaTeX, Typing Speed: 60-80 wpm 
-              
-              
+                \textbf{Development:} Ruby/Rails/Sinatra/etc., HTML/CSS, JavaScript/jQuery, PHP, Java  \\
+                \textbf{Server Administration:} Ubuntu, Apache, MySQL/SQLite  \\
+                \textbf{Favorite Tools:} Mac OS X, Git, TextMate, Vim, Photoshop, Illustrator, \LaTeX  
 \sectionspace
 
 \section{\fontspec[Color=MainColor]{Proxima Nova}
-  Education
-}
+Education}
               
                 \textbf{Bachelor of Science in Software Engineering \dotfill May 2010 }  \\
-                Minor in Mathematics \hfill  \textsc{The University of Texas at Arlington}
-              
+                Minor in Mathematics \hfill \textsc{The University of Texas at Arlington}
+
                 \textbf{Certificate in Biblical Studies \dotfill May 2006 }  \\
-                Emphasis in Computer Information Systems \hfill  \textsc{Emmaus Bible College}
-              
+                Emphasis in Computer Information Systems \hfill \textsc{Emmaus Bible College}
+
 \sectionspace
 
 
 \section{\fontspec[Color=MainColor]{Proxima Nova}
-  Relevant \\ Experience
-}
+Relevant \\ Experience}
 
               
                 \textbf{Interactive Developer
                  at Balcom Agency in Fort Worth, Texas\dotfill 2010--2011}
                  \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
-                   \item Built, deployed, and maintained websites for clients using Ruby on Rails and Drupal
+                   \item Handcrafted HTML, CSS, and Javascript from Photoshop comps
                  
-                   \item Designed a deployment infrastructure for Drupal websites
+                   \item Developed websites for clients using Ruby on Rails, Drupal, and other technologies
                  
-                   \item Developed a website monitoring tool to notify us of unavailability
+                   \item Currently developing a helpdesk ticketing system (http://phillipridlen.com/aszist)
+                 
+                   \item Managed deployments on Heroku, Rackspace Cloud Servers, and GitHub Pages.
                  \end{itemize}
               
                 \textbf{Web Guru
@@ -106,9 +99,7 @@
                  \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
                    \item Refreshed design of existing websites
                  
-                   \item Ensured XHTML compliance
-                 
-                   \item Wrote a time clock web app using Ruby on Rails
+                   \item Designed and launched a new website for a new line of products
                  \end{itemize}
               
                 \textbf{Self-employed
@@ -127,19 +118,27 @@
                    \item Performed routine preventative maintenance on office desktop PCs
                  \end{itemize}
               
+                \textbf{Barista
+                 at Mountain Mudd/J.J. Mocha's in Burleson, Texas\dotfill 2006--2007}
+                 \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
+                   \item Brewed specialty espresso beverages for customers
+                 
+                   \item Spent time while not on the clock improving my craft
+                 \end{itemize}
+              
 
 \sectionspace
 
 
 \section{\fontspec[Color=MainColor]{Proxima Nova}
-  Endorsements
-}
+Endorsements}
 
               
                 ``Phillip is someone who carefully reads the customer and then provides the
-expected service. Phillip is truly a man of great character. He puts his
+expected service. [He] is truly a man of great character. He puts his
 heart into anything he does. He doesn't hesitate to seek advice to improve
-himself and his approach to a service or product.''                    \\
+himself and his approach to a service or product.
+''                    \\
                 -- Gibby Espinoza, Customer
               
 
@@ -149,10 +148,7 @@ himself and his approach to a service or product.''                    \\
 \sectionspace
 
 
-\textbf{\footnotesize
-  Contact information for personal and professional references is available upon
-  request.
-}
+\textbf{\footnotesize Contact information for personal and professional references is available upon request.}
 
 
 \end{resume}

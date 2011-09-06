@@ -1,35 +1,37 @@
                         ===============================
                              Phillip Thomas Ridlen
-                            Web & Software Developer
+                       Web Developer & Software Engineer
                         -------------------------------
                          5008 Lincoln Oaks Drive North
                                Apartment No. 502
                             Fort Worth, Texas 76132
-                                  +16825579480
+                               +1 (682) 557-9480
                         ===============================
 
 == Skills
 
-  * Development: Ruby/Rails, PHP, MySQL/PostgreSQL, Javascript/jQuery, Git
-  * Design: HTML, CSS, Photoshop, Illustrator
-  * Office: Apple iWork, Microsoft Office, LaTeX, Typing Speed: 60-80 wpm
+  * Development: Ruby/Rails/Sinatra/etc., HTML/CSS, JavaScript/jQuery, PHP, Java
+  * Server Administration: Ubuntu, Apache, MySQL/SQLite
+  * Favorite Tools: Mac OS X, Git, TextMate, Vim, Photoshop, Illustrator, LaTeX
 
 == Experience
 
    Interactive Developer at Balcom Agency
    Fort Worth, Texas (2010 - 2011)
 
-     * Built, deployed, and maintained websites for clients using Ruby on
-       Rails and Drupal
-     * Designed a deployment infrastructure for Drupal websites
-     * Developed a website monitoring tool to notify us of unavailability
+     * Handcrafted HTML, CSS, and Javascript from Photoshop comps
+     * Developed websites for clients using Ruby on Rails, Drupal, and other
+       technologies
+     * Currently developing a helpdesk ticketing system
+       (http://phillipridlen.com/aszist)
+     * Managed deployments on Heroku, Rackspace Cloud Servers, and GitHub
+       Pages.
 
    Web Guru at Diverse Suspension Technologies
    Burleson, Texas (2009 - 2010)
 
      * Refreshed design of existing websites
-     * Ensured XHTML compliance
-     * Wrote a time clock web app using Ruby on Rails
+     * Designed and launched a new website for a new line of products
 
    Self-employed at Freelance Design and Development
    Burleson, Texas (2003 - 2010)
@@ -43,11 +45,17 @@
      * Provided effective PC troubleshooting
      * Performed routine preventative maintenance on office desktop PCs
 
+   Barista at Mountain Mudd/J.J. Mocha's
+   Burleson, Texas (2006 - 2007)
+
+     * Brewed specialty espresso beverages for customers
+     * Spent time while not on the clock improving my craft
+
 == Endorsements
 
    "Phillip is someone who carefully reads the customer and then provides the
-   expected service. Phillip is truly a man of great character. He puts his
+   expected service. [He] is truly a man of great character. He puts his
    heart into anything he does. He doesn't hesitate to seek advice to improve
-   himself and his approach to a service or product."
+   himself and his approach to a service or product. "
 
    -- Gibby Espinoza, Customer
