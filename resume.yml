@@ -72,8 +72,8 @@ experience:
     title: Interactive Developer
     points:
       - "Built, deployed, and maintained websites for clients using Ruby on Rails and Drupal"
-      - "Designed a deployment infrastructure for Drupal websites"
-      - "Developed a website monitoring tool to notify us of unavailability"
+      - "Created a helpdesk ticketing system (http://github.com/philtr/aszist)"
+      - "Managed deployments on Heroku, Rackspace Cloud Servers, and GitHub Pages."
     date:
       start:
         month: June
