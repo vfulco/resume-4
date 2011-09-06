@@ -10,6 +10,7 @@
 \usepackage{xcolor}
 \definecolor{MainColor}{rgb}{.33,.33,.33}
 \definecolor{HeaderColor}{rgb}{.148,.305,.348}
+\definecolor{LineColor}{rgb}{.97,.97,.97}
 
 \usepackage{setspace}
 
@@ -20,7 +21,11 @@
 
 
 % DRY
-\newcommand{\widerule}{\moveleft\hoffset\vbox{\hrule width\resumewidth height 0.1pt}}
+\newcommand{\widerule}{
+  \moveleft\hoffset\vbox{
+    \textcolor{LineColor}{\hrule width\resumewidth height 0.1pt}
+  }
+}
 \newcommand{\sectionspace}{\vspace{10pt}}
 \renewcommand{\labelitemi}{\scriptsize\ding{93}}
 
@@ -37,17 +42,18 @@
   }\sectionspace
 
 \begin{resume}
-\linespread{1.3}
 
 % Contact information box
- \moveleft1.06\hoffset\vbox{
-
+ \moveleft1.12\hoffset\vbox{\colorbox{LineColor}{
   <% @contact = @resume.particulars.contact %>
   \begin{tabular}{l@{\hspace{.80in}}l@{\hspace{.7in}}l@{\hspace{.8in}}l@{\hspace{.50in}}l}
+    & & & & \\
     \textbf{Address:} & <%= @contact.address.street.le %>  & \textbf{Telephone:}  & <%= @contact.telephone.le %>               \\
                       & <%= @contact.address.street2.le %>                & \textbf{Email:}      & <%= @contact.email.le %>            \\
-                      & <%= @contact.address.city.le %>, <%= @contact.address.state.le %> <%= @contact.address.zipcode.le %>   & \textbf{Website:} & <%= @contact.websites.map{|w|w.le}.join("#{/\\/.source} \& \& \& ") %>
-  \end{tabular}}
+                      & <%= @contact.address.city.le %>, <%= @contact.address.state.le %> <%= @contact.address.zipcode.le %>   & \textbf{Website:} & <%= @contact.websites.map{|w|w.le}.join("#{/\\/.source} \& \& \& ") %> \\
+  & & & &
+  \end{tabular}}}
+
 
 \setstretch{1}
 
@@ -62,8 +68,8 @@ Skills}
 Education}
               <% @resume.education.each do |ed| %>
                 \textbf{<%= ed.degree.type %> in <%= ed.degree.major %> \dotfill <%= ed.degree.conferred %> }  \\
-                <%= "Minor in #{ed.degree.minor}" if ed.degree.minor %><%= "Emphasis in #{ed.degree.emphasis}" if ed.degree.emphasis %> \hfill  \textsc{<%= ed.school %>}
-              <% end %>
+                <%= "Minor in #{ed.degree.minor}" if ed.degree.minor %><%= "Emphasis in #{ed.degree.emphasis}" if ed.degree.emphasis %> \hfill \textsc{<%= ed.school %>}
+<% end %>
 \sectionspace
 
 

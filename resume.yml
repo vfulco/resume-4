@@ -3,7 +3,7 @@ particulars:
     - Phillip
     - Thomas
     - Ridlen
-  tagline: "Web & Software Developer"
+  tagline: "Web Developer & Software Engineer"
   contact:
     address:
       street: 5008 Lincoln Oaks Drive North
@@ -11,32 +11,33 @@ particulars:
       city: Fort Worth
       state: Texas
       zipcode: 76132
-    telephone: "+16825579480"
+    telephone: "+1 (682) 557-9480"
     email: phillip@ridlen.net
     websites:
       - "http://phillipridlen.com"
-      - "http://github.com/philtr"
 
 skills:
   - category: Development
     skills:
-      - Ruby/Rails
+      - Ruby/Rails/Sinatra/etc.
+      - HTML/CSS
+      - JavaScript/jQuery
       - PHP
-      - MySQL/PostgreSQL
-      - Javascript/jQuery
-      - Git
-  - category: Design
+      - Java
+  - category: Server Administration
     skills:
-      - HTML
-      - CSS
+      - Ubuntu
+      - Apache
+      - MySQL/SQLite
+  - category: Favorite Tools
+    skills:
+      - Mac OS X
+      - Git
+      - TextMate
+      - Vim
       - Photoshop
       - Illustrator
-  - category: Office
-    skills:
-      - Apple iWork
-      - Microsoft Office
       - LaTeX
-      - "Typing Speed: 60-80 wpm"
 
 education:
   - school: The University of Texas at Arlington
@@ -68,11 +69,12 @@ experience:
         city: Fort Worth
         state: Texas
         zip: 76102
-      telephone: "+18178779933"
+      telephone: "+1 (817) 877-9933"
     title: Interactive Developer
     points:
-      - "Built, deployed, and maintained websites for clients using Ruby on Rails and Drupal"
-      - "Created a helpdesk ticketing system (http://github.com/philtr/aszist)"
+      - "Handcrafted HTML, CSS, and Javascript from Photoshop comps"
+      - "Developed websites for clients using Ruby on Rails, Drupal, and other technologies"
+      - "Currently developing a helpdesk ticketing system (http://phillipridlen.com/aszist)"
       - "Managed deployments on Heroku, Rackspace Cloud Servers, and GitHub Pages."
     date:
       start:
@@ -89,8 +91,7 @@ experience:
     title: Web Guru
     points:
       - "Refreshed design of existing websites"
-      - "Ensured XHTML compliance"
-      - "Wrote a time clock web app using Ruby on Rails"
+      - "Designed and launched a new website for a new line of products"
     date:
       start:
         month: March
@@ -128,6 +129,22 @@ experience:
       end:
         month: March
         year: 2009
+  - name: Mountain Mudd/J.J. Mocha's
+    contact:
+      address:
+        city: Burleson
+        state: Texas
+    title: Barista
+    points:
+      - Brewed specialty espresso beverages for customers
+      - Spent time while not on the clock improving my craft
+    date:
+      start:
+        month: January
+        year: 2006
+      end:
+        month:
+        year: 2007
 
 endorsements:
   - from:
@@ -135,6 +152,6 @@ endorsements:
       rel: Customer
     body: |
       Phillip is someone who carefully reads the customer and then provides the
-      expected service. Phillip is truly a man of great character. He puts his
+      expected service. [He] is truly a man of great character. He puts his
       heart into anything he does. He doesn't hesitate to seek advice to improve
       himself and his approach to a service or product.
