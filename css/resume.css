@@ -33,6 +33,7 @@ a {
 address {
   font-style: normal; }
 dt { font-weight: bold; }
+dd { margin-left: 0; }
 footer {
   margin-top: 6em;
   font-size: 12px;}
@@ -45,9 +46,13 @@ footer .divider {
   margin: 0 0 0 0;
   padding: 0 0 2em 0; }
   #contact h3 { display: none; }
+  #contact address {
+    background-color: #F7F7F7;
+    float: left;
+    padding: 0 1.5em; }
   #contact address p {
     float: left;
-    margin-right: 60px; }
+    margin-right: 50px; }
 #skills dt {
   display: inline-block;
   float: left;
