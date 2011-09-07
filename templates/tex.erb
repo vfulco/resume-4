@@ -44,7 +44,7 @@
 
 
 % Contact information box
- \moveleft1.12\hoffset\vbox{\colorbox{LineColor}{
+ \moveleft1.12\hoffset\vbox{
   <% @contact = @resume.particulars.contact %>
   \begin{tabular}{l@{\hspace{.80in}}l@{\hspace{.7in}}l@{\hspace{.8in}}l@{\hspace{.50in}}l}
     & & & & \\
@@ -52,7 +52,7 @@
                       & <%= @contact.address.street2.le %>                & \textbf{Email:}      & <%= @contact.email.le %>            \\
                       & <%= @contact.address.city.le %>, <%= @contact.address.state.le %> <%= @contact.address.zipcode.le %>   & \textbf{Website:} & <%= @contact.websites.map{|w|w.le}.join("#{/\\/.source} \& \& \& ") %> \\
   & & & &
-  \end{tabular}}}
+  \end{tabular}}
 
 
 \setstretch{1}
