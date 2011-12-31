@@ -15,8 +15,8 @@
         <address>
           <p id="street">
             <%= @resume.particulars.contact.address.street %><br/>
-            <%= @resume.particulars.contact.address.street2 %><br/>
-            <%= @resume.particulars.contact.address.city %>,<%= @resume.particulars.contact.address.state %> <%= @resume.particulars.contact.address.zipcode %>
+            <%= "#{street2 = @resume.particulars.contact.address.street2} <br/>" unless street2.nil? %><br />
+            <%= @resume.particulars.contact.address.city %>, <%= @resume.particulars.contact.address.state %> <%= @resume.particulars.contact.address.zipcode %>
           </p>
           <p id="telephone">
             <%= @resume.particulars.contact.telephone %>

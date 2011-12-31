@@ -6,11 +6,12 @@ particulars:
   tagline: "Web Developer & Software Engineer"
   contact:
     address:
-      street: 5008 Lincoln Oaks Drive North
-      street2: Apartment No. 502
-      city: Fort Worth
+      street: 708 Vaughn Drive
+      street2:
+      city: Burleson
       state: Texas
-      zipcode: 76132
+      zipcode: 76028
+      country: United States
     telephone: "+1 (682) 557-9480"
     email: phillip@ridlen.net
     websites:

@@ -6,7 +6,7 @@
   <%= @resume.particulars.tagline %><br />
   <%= "-" * divider_length %><br />
   <%= @resume.particulars.contact.address.street %><br />
-  <%= @resume.particulars.contact.address.street2 %><br />
+  <%= "#{street2 = @resume.particulars.contact.address.street2} <br/>" unless street2.nil? %><br />
   <%= @resume.particulars.contact.address.city %>, <%= @resume.particulars.contact.address.state %> <%= @resume.particulars.contact.address.zipcode %><br />
   <%= @resume.particulars.contact.telephone %><br />
   <%= "=" * divider_length %>
