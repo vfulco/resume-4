@@ -13,7 +13,7 @@ section {
   clear: left; }
   section h3 { 
     position: relative; 
-    left: -175px;
+    left: -155px;
     margin: 0;
     float: left;
     width: 0; }
@@ -49,10 +49,12 @@ footer .divider {
   #contact address {
     background-color: #F7F7F7;
     float: left;
-    padding: 0 1.5em; }
+    padding: 0 1.5em;
+    width: 100%; }
   #contact address p {
     float: left;
-    margin-right: 50px; }
+    margin-right: 50px;
+    width: 150px; }
 #skills dt {
   display: inline-block;
   float: left;
