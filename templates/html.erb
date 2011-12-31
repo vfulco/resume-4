@@ -4,7 +4,7 @@
     <title><%= @resume.particulars.name.join(' ') %> | R&eacute;sum&eacute;</title>
     <script src="http://use.typekit.com/cak6cdh.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
-    <link rel="stylesheet" href="css/resume.css"/>
+    <link rel="stylesheet" href="http://phillipridlen.com/resume/css/resume.css"/>
   </head>
   <body>
     <header>
@@ -36,6 +36,21 @@
         <dt><%= category.category %>:</dt>
         <dd><%= category.skills.join(', ') %></dd>
       <% end %>
+      </dl>
+    </section>
+    <section id="education">
+      <h3>Education</h3>
+      <dl>
+        <% @resume.education.each do |ed| %>
+        <dt><%= ed.degree.type %> in <%= ed.degree.major %> from <%= ed.school %></dt>
+        <dd>
+          <p style="margin-top: 0;"><em><% unless ed.degree.minor.to_s.empty?  %>
+            <%= "Minor in #{ ed.degree.minor }" %>
+          <% end; unless ed.degree.emphasis.to_s.empty? %>
+            <%= "Emphasis in #{ ed.degree.emphasis }" %>
+          <% end %></em></p>
+        </dd>
+        <% end %>
       </dl>
     </section>
     <section id="experience">
