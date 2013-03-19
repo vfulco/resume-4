@@ -1,3 +1,6 @@
+<% @fonts = { main: "Proxima Nova",
+              display: "Alegreya Black",
+              thin: "Brandon Grotesque Thin" } %>
 % LaTeX resume using res.cls
 \documentclass[margin]{res}
 
@@ -5,7 +8,7 @@
 \usepackage{fontspec}
 \usepackage{pifont}
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont{Proxima Nova}
+\setmainfont{<%= @fonts[:main] %>}
 
 \usepackage{xcolor}
 \definecolor{MainColor}{rgb}{.33,.33,.33}
@@ -32,14 +35,14 @@
 \begin{document}
 \begin{resume}
 \small
-\fontspec[Color=MainColor]{Proxima Nova}
+\fontspec[Color=MainColor]{<%= @fonts[:main] %>}
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
   \fontsize{42}{42}
-    \fontspec[Color=HeaderColor]{Bello Pro}\textbf{<%= @resume.particulars.name.join(' ').le %>} \\
+    \fontspec[Color=HeaderColor]{<%= @fonts[:display] %>}<%= @resume.particulars.name.join(' ').le %> \\
   \fontsize{20}{16} \smallskip \\
-    \fontspec[Color=MainColor]{Proxima Nova Thin}<%= @resume.particulars.tagline.le %>
-    \fontspec[Color=MainColor]{Proxima Nova}
+    \fontspec[Color=MainColor]{<%= @fonts[:thin] %>}<%= @resume.particulars.tagline.le %>
+    \fontspec[Color=MainColor]{<%= @fonts[:main] %>}
   }\sectionspace
 
 
@@ -57,14 +60,14 @@
 
 \setstretch{1}
 
-\section{\fontspec[Color=MainColor]{Proxima Nova}
+\section{\fontspec[Color=MainColor]{<%= @fonts[:main] %>}
 Skills}
 
               <% @resume.skills.each do |category| %>
                 \textbf{<%= category.category.le %>:} <%= category.skills.join(', ').le %>  <%= /\\/.source unless category == @resume.skills.last %><% end %>
 \sectionspace
 
-\section{\fontspec[Color=MainColor]{Proxima Nova}
+\section{\fontspec[Color=MainColor]{<%= @fonts[:main] %>}
 Education}
               <% @resume.education.each do |ed| %>
                 \textbf{<%= ed.degree.type %> in <%= ed.degree.major %> \dotfill <%= ed.degree.conferred %> }  \\
@@ -73,7 +76,7 @@ Education}
 \sectionspace
 
 
-\section{\fontspec[Color=MainColor]{Proxima Nova}
+\section{\fontspec[Color=MainColor]{<%= @fonts[:main] %>}
 Relevant \\ Experience}
 
               <% @resume.experience.each do |company| %>
@@ -87,7 +90,7 @@ Relevant \\ Experience}
 \sectionspace
 
 
-\section{\fontspec[Color=MainColor]{Proxima Nova}
+\section{\fontspec[Color=MainColor]{<%= @fonts[:main] %>}
 Endorsements}
 
               <% @resume.endorsements.each do |endorsement| %>
