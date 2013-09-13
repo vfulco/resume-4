@@ -2,7 +2,7 @@ html { background-color: #fff; }
 body {
   background-color: #fff;
   color: #555;
-  font-family: "proxima-nova-1","proxima-nova-2","Proxima Nova",sans-serif;
+  font-family: "skolar","Skolar PE",serif;
   font-size: 14px;
   width: 800px;
   margin: 0 auto;
@@ -19,10 +19,11 @@ section {
     width: 0; }
 h1 {
   color: #264E59;
-  font-family: "bello-pro-1","bello-pro-2","Bello Pro",sans-serif;
+  font-family: "brandon-grotesque","Brandon Grotesque",sans-serif;
   font-size: 60px;
   margin-bottom: 0; }
 h2 {
+  font-family: "brandon-grotesque","Brandon Grotesque",sans-serif;
   font-weight: 100;
   font-size: 32px;
   margin: 0 0 1em 0; }
