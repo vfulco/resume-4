@@ -1,6 +1,7 @@
-<% @fonts = { main: "Proxima Nova",
-              display: "Alegreya Black",
-              thin: "Brandon Grotesque Thin" } %>
+<% @fonts = { :main => "Skolar PE",
+              :display => "Brandon Grotesque Black",
+              :thin => "Brandon Grotesque Thin" } %>
+
 % LaTeX resume using res.cls
 \documentclass[margin]{res}
 
@@ -38,9 +39,9 @@
 \fontspec[Color=MainColor]{<%= @fonts[:main] %>}
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
-  \fontsize{42}{42}
-    \fontspec[Color=HeaderColor]{<%= @fonts[:display] %>}<%= @resume.particulars.name.join(' ').le %> \\
-  \fontsize{20}{16} \smallskip \\
+  \fontsize{32}{0}
+    \fontspec[Color=HeaderColor,LetterSpace=3]{<%= @fonts[:display] %>}<%= @resume.particulars.name.join(' ').upcase.le %> \\
+  \fontsize{18}{2} \smallskip \\
     \fontspec[Color=MainColor]{<%= @fonts[:thin] %>}<%= @resume.particulars.tagline.le %>
     \fontspec[Color=MainColor]{<%= @fonts[:main] %>}
   }\sectionspace
