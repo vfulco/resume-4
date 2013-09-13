@@ -1,0 +1,64 @@
+                               ==================
+                                 Phillip Ridlen
+                             Ruby Software Engineer
+                               ------------------
+                                708 Vaughn Drive
+
+                             Burleson, Texas 76028
+                               +1 (682) 557-9480
+                               ==================
+
+== Skills
+
+  * Development: Ruby/Rails/Sinatra/etc., HTML, CSS, JavaScript/jQuery
+  * Favorite Tools: Mac OS X, Git, Vim (MacVim), Photoshop, Illustrator, LaTeX
+
+== Experience
+
+   Developer at Oven Bits
+   Dallas, Texas (2011 - 2013)
+
+     * Maintaned and refactored legacy app code
+     * Built custom web applications with Ruby
+     * Gained experience developing with TDD
+     * Worked as a team member with high-profile organizations like
+       Livestrong and the National Breast Cancer Foundation.
+
+   Interactive Developer at Balcom Agency
+   Fort Worth, Texas (2010 - 2011)
+
+     * Handcrafted HTML, CSS, and Javascript from Photoshop comps
+     * Developed websites for clients using Ruby on Rails, Drupal, and other
+       technologies
+     * Currently developing a helpdesk ticketing system
+       (http://phillipridlen.com/aszist)
+     * Managed deployments on Heroku, Rackspace Cloud Servers, and GitHub
+       Pages.
+
+   Web Guru at Diverse Suspension Technologies
+   Burleson, Texas (2009 - 2010)
+
+     * Refreshed design of existing websites
+     * Maintaned and added features to existing ASP shopping cart
+     * Designed and launched a new website for a new line of products
+
+   Self-employed at Freelance Design and Development
+   Burleson, Texas (2003 - 2010)
+
+     * Developed custom websites and WordPress themes
+     * Designed print products for local bands, organizations, and businesses
+
+   OnForce Technician at Ball Corporation
+   Fort Worth, Texas (2007 - 2009)
+
+     * Provided effective PC troubleshooting
+     * Performed routine preventative maintenance on office desktop PCs
+
+== Endorsements
+
+   "Phillip is someone who carefully reads the customer and then provides the
+   expected service. [He] is truly a man of great character. He puts his
+   heart into anything he does. He doesn't hesitate to seek advice to improve
+   himself and his approach to a service or product. "
+
+   -- Gibby Espinoza, Customer

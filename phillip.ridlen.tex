@@ -1,0 +1,162 @@
+
+
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+
+% set up fonts
+\usepackage{fontspec}
+\usepackage{pifont}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Skolar PE}
+
+\usepackage{xcolor}
+\definecolor{MainColor}{rgb}{.33,.33,.33}
+\definecolor{HeaderColor}{rgb}{.148,.305,.348}
+\definecolor{LineColor}{rgb}{.97,.97,.97}
+
+\usepackage{setspace}
+
+\setlength{\textwidth}{5.1in} % set width of text portion
+
+% this value may need to be adjusted as content is added or removed.
+\setlength{\parskip}{8pt}
+
+
+% DRY
+\newcommand{\widerule}{
+  \moveleft\hoffset\vbox{
+    \textcolor{LineColor}{\hrule width\resumewidth height 0.1pt}
+  }
+}
+\newcommand{\sectionspace}{\vspace{10pt}}
+\renewcommand{\labelitemi}{\scriptsize\ding{93}}
+
+\begin{document}
+\begin{resume}
+\small
+\fontspec[Color=MainColor]{Skolar PE}
+% Name and subtitle, left-aligned
+\moveleft\hoffset\vbox{
+  \fontsize{32}{0}
+    \fontspec[Color=HeaderColor,LetterSpace=3]{Brandon Grotesque Black}PHILLIP RIDLEN \\
+  \fontsize{18}{2} \smallskip \\
+    \fontspec[Color=MainColor]{Brandon Grotesque Thin}Ruby Software Engineer
+    \fontspec[Color=MainColor]{Skolar PE}
+  }\sectionspace
+
+
+% Contact information box
+ \moveleft1.06\hoffset\vbox{
+  
+  \begin{tabular}{l@{\hspace{.80in}}l@{\hspace{.7in}}l@{\hspace{.8in}}l@{\hspace{.50in}}l}
+    & & & & \\
+      \textbf{Address:} & 708 Vaughn Drive  & \textbf{Telephone:}  & +1 (682) 557-9480               \\
+                        & Burleson, Texas 76028  & \textbf{Email:}      & phillip@ridlen.net            \\
+                        & United States & \textbf{Website:} & http://phillipridlen.com \\
+  & & & &
+  \end{tabular}}
+
+
+\setstretch{1}
+
+\section{\fontspec[Color=MainColor]{Skolar PE}
+Skills}
+
+              
+                \textbf{Development:} Ruby/Rails/Sinatra/etc., HTML, CSS, JavaScript/jQuery  \\
+                \textbf{Favorite Tools:} Mac OS X, Git, Vim (MacVim), Photoshop, Illustrator, \LaTeX  
+\sectionspace
+
+\section{\fontspec[Color=MainColor]{Skolar PE}
+Education}
+              
+                \textbf{Bachelor of Science in Software Engineering \dotfill May 2010 }  \\
+                Minor in Mathematics \hfill \textsc{The University of Texas at Arlington}
+
+                \textbf{Certificate in Biblical Studies \dotfill May 2006 }  \\
+                Emphasis in Computer Information Systems \hfill \textsc{Emmaus Bible College}
+
+\sectionspace
+
+
+\section{\fontspec[Color=MainColor]{Skolar PE}
+Relevant \\ Experience}
+
+              
+                \textbf{Developer
+                 at Oven Bits in Dallas, Texas\dotfill 2011--2013}
+                 \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
+                   \item Maintaned and refactored legacy app code
+                 
+                   \item Built custom web applications with Ruby
+                 
+                   \item Gained experience developing with TDD
+                 
+                   \item Worked as a team member with high-profile organizations like Livestrong and the National Breast Cancer Foundation.
+                 \end{itemize}
+              
+                \textbf{Interactive Developer
+                 at Balcom Agency in Fort Worth, Texas\dotfill 2010--2011}
+                 \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
+                   \item Handcrafted HTML, CSS, and Javascript from Photoshop comps
+                 
+                   \item Developed websites for clients using Ruby on Rails, Drupal, and other technologies
+                 
+                   \item Currently developing a helpdesk ticketing system (http://phillipridlen.com/aszist)
+                 
+                   \item Managed deployments on Heroku, Rackspace Cloud Servers, and GitHub Pages.
+                 \end{itemize}
+              
+                \textbf{Web Guru
+                 at Diverse Suspension Technologies in Burleson, Texas\dotfill 2009--2010}
+                 \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
+                   \item Refreshed design of existing websites
+                 
+                   \item Maintaned and added features to existing ASP shopping cart
+                 
+                   \item Designed and launched a new website for a new line of products
+                 \end{itemize}
+              
+                \textbf{Self-employed
+                 at Freelance Design and Development in Burleson, Texas\dotfill 2003--2010}
+                 \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
+                   \item Developed custom websites and WordPress themes
+                 
+                   \item Designed print products for local bands, organizations, and businesses
+                 \end{itemize}
+              
+                \textbf{OnForce Technician
+                 at Ball Corporation in Fort Worth, Texas\dotfill 2007--2009}
+                 \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items 
+                   \item Provided effective PC troubleshooting
+                 
+                   \item Performed routine preventative maintenance on office desktop PCs
+                 \end{itemize}
+              
+
+\sectionspace
+
+
+\section{\fontspec[Color=MainColor]{Skolar PE}
+Endorsements}
+
+              
+                ``Phillip is someone who carefully reads the customer and then provides the
+expected service. [He] is truly a man of great character. He puts his
+heart into anything he does. He doesn't hesitate to seek advice to improve
+himself and his approach to a service or product.
+''                    \\
+                -- Gibby Espinoza, Customer
+              
+
+\sectionspace
+
+
+\sectionspace
+
+
+\textbf{\footnotesize Contact information for personal and professional references is available upon request.}
+
+
+\end{resume}
+\end{document}
