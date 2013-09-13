@@ -1,9 +1,9 @@
 particulars:
   name:
     - Phillip
-    - Thomas
+    # - Thomas
     - Ridlen
-  tagline: "Web Developer & Software Engineer"
+  tagline: "Ruby Software Engineer"
   contact:
     address:
       street: 708 Vaughn Drive
@@ -21,21 +21,14 @@ skills:
   - category: Development
     skills:
       - Ruby/Rails/Sinatra/etc.
-      - HTML/CSS
+      - HTML
+      - CSS
       - JavaScript/jQuery
-      - PHP
-      - Java
-  - category: Server Administration
-    skills:
-      - Ubuntu
-      - Apache
-      - MySQL/SQLite
   - category: Favorite Tools
     skills:
       - Mac OS X
       - Git
-      - TextMate
-      - Vim
+      - Vim (MacVim)
       - Photoshop
       - Illustrator
       - LaTeX
@@ -63,6 +56,26 @@ education:
       conferred: May 2006
 
 experience:
+  - name: Oven Bits
+    contact:
+      address:
+        street: 2211 N. Lamar St
+        city: Dallas
+        state: Texas
+        zip: 75202
+    title: Developer
+    points:
+      - "Maintaned and refactored legacy app code"
+      - "Built custom web applications with Ruby"
+      - "Gained experience developing with TDD"
+      - "Worked as a team member with high-profile organizations like Livestrong and the National Breast Cancer Foundation."
+    date:
+      start:
+        month: February
+        year: 2011
+      end:
+        month: <%= Time.now.strftime "%B" %>
+        year: <%= Time.now.strftime "%Y" %>
   - name: Balcom Agency
     contact:
       address:
@@ -82,8 +95,8 @@ experience:
         month: June
         year: 2010
       end:
-        month: <%= Time.now.strftime "%B" %>
-        year: <%= Time.now.strftime "%Y" %>
+        month: January
+        year: 2011
   - name: Diverse Suspension Technologies
     contact:
       address:
@@ -92,6 +105,7 @@ experience:
     title: Web Guru
     points:
       - "Refreshed design of existing websites"
+      - "Maintaned and added features to existing ASP shopping cart"
       - "Designed and launched a new website for a new line of products"
     date:
       start:
@@ -130,22 +144,6 @@ experience:
       end:
         month: March
         year: 2009
-  - name: Mountain Mudd/J.J. Mocha's
-    contact:
-      address:
-        city: Burleson
-        state: Texas
-    title: Barista
-    points:
-      - Brewed specialty espresso beverages for customers
-      - Spent time while not on the clock improving my craft
-    date:
-      start:
-        month: January
-        year: 2006
-      end:
-        month:
-        year: 2007
 
 endorsements:
   - from:
