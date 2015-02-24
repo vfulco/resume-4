@@ -149,8 +149,4 @@ endorsements:
   - from:
       name: Gibby Espinoza
       rel: Customer
-    body: |
-      Phillip is someone who carefully reads the customer and then provides the
-      expected service. [He] is truly a man of great character. He puts his
-      heart into anything he does. He doesn't hesitate to seek advice to improve
-      himself and his approach to a service or product.
+    body: "Phillip is someone who carefully reads the customer and then provides the expected service. [He] is truly a man of great character. He puts his heart into anything he does. He doesn't hesitate to seek advice to improve himself and his approach to a service or product."

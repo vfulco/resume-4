@@ -1,111 +1,84 @@
-<% @fonts = { :main => "Skolar PE",
-              :display => "Brandon Grotesque Black",
-              :thin => "Brandon Grotesque Thin" } %>
-
 % LaTeX resume using res.cls
 \documentclass[margin]{res}
 
-% set up fonts
+% fonts
 \usepackage{fontspec}
-\usepackage{pifont}
-\defaultfontfeatures{Mapping=tex-text}
-\setmainfont{<%= @fonts[:main] %>}
+\setmainfont[Ligatures={Common,TeX}]{Open Sans}
 
-\usepackage{xcolor}
-\definecolor{MainColor}{rgb}{.33,.33,.33}
-\definecolor{HeaderColor}{rgb}{.148,.305,.348}
-\definecolor{LineColor}{rgb}{.97,.97,.97}
-
+% spacing
 \usepackage{setspace}
-
 \setlength{\textwidth}{5.1in} % set width of text portion
-
-% this value may need to be adjusted as content is added or removed.
+\newcommand{\sectionspace}{\vspace{8pt}}
 \setlength{\parskip}{8pt}
-
-
-% DRY
-\newcommand{\widerule}{
-  \moveleft\hoffset\vbox{
-    \textcolor{LineColor}{\hrule width\resumewidth height 0.1pt}
-  }
-}
-\newcommand{\sectionspace}{\vspace{10pt}}
-\renewcommand{\labelitemi}{\scriptsize\ding{93}}
 
 \begin{document}
 \begin{resume}
 \small
-\fontspec[Color=MainColor]{<%= @fonts[:main] %>}
+
 % Name and subtitle, left-aligned
 \moveleft\hoffset\vbox{
-  \fontsize{32}{0}
-    \fontspec[Color=HeaderColor,LetterSpace=3]{<%= @fonts[:display] %>}<%= @resume.particulars.name.join(' ').upcase.le %> \\
-  \fontsize{18}{2} \smallskip \\
-    \fontspec[Color=MainColor]{<%= @fonts[:thin] %>}<%= @resume.particulars.tagline.le %>
-    \fontspec[Color=MainColor]{<%= @fonts[:main] %>}
-  }\sectionspace
+  \Huge <%= @resume.particulars.name.join(' ').le %> \\
+  \Large <%= @resume.particulars.tagline.le %>
+}
 
+\sectionspace
 
 % Contact information box
  \moveleft1.06\hoffset\vbox{
   <% @contact = @resume.particulars.contact %>
   \begin{tabular}{l@{\hspace{.80in}}l@{\hspace{.7in}}l@{\hspace{.8in}}l@{\hspace{.50in}}l}
-    & & & & \\
       \textbf{Address:} & <%= @contact.address.street.le %>  & \textbf{Telephone:}  & <%= @contact.telephone.le %>               \\
                         & <%= @contact.address.city.le %>, <%= @contact.address.state.le %> <%= @contact.address.zipcode.le %>  & \textbf{Email:}      & <%= @contact.email.le %>            \\
                         & <%= @contact.address.country.le %> & \textbf{Website:} & <%= @contact.websites.map{|w|w.le}.join("#{/\\/.source} \& \& \& ") %> \\
-  & & & &
-  \end{tabular}}
+  \end{tabular}
+}
 
 
-\setstretch{1}
 
-\section{\fontspec[Color=MainColor]{<%= @fonts[:main] %>}
-Skills}
+\section{Skills}
 
               <% @resume.skills.each do |category| %>
-                \textbf{<%= category.category.le %>:} <%= category.skills.join(', ').le %>  <%= /\\/.source unless category == @resume.skills.last %><% end %>
+                \textbf{<%= category.category.le %>:} <%= category.skills.join(', ').le %> <% unless category == @resume.skills.last %>\\<% end %><% end %>
+
 \sectionspace
 
-\section{\fontspec[Color=MainColor]{<%= @fonts[:main] %>}
-Education}
+\section{Education}
+
               <% @resume.education.each do |ed| %>
                 \textbf{<%= ed.degree.type %> in <%= ed.degree.major %> \dotfill <%= ed.degree.conferred %> }  \\
                 <%= "Minor in #{ed.degree.minor}" if ed.degree.minor %><%= "Emphasis in #{ed.degree.emphasis}" if ed.degree.emphasis %> \hfill \textsc{<%= ed.school %>}
-<% end %>
+              <% end %>
+
 \sectionspace
 
-
-\section{\fontspec[Color=MainColor]{<%= @fonts[:main] %>}
-Relevant \\ Experience}
+\section{Relevant \\ Experience}
 
               <% @resume.experience.each do |company| %>
                 \textbf{<%= company.title.le %>
                  at <%= company.name.le %> in <%= company.contact.address.city.le %>, <%= company.contact.address.state.le %>\dotfill <%= company.date.start.year.le %>--<%= company.date.end.year.le %>}
-                 \vspace{-10pt}\begin{itemize} \itemsep -2pt %reduce space between items <% company.points.each do |point| %>
-                   \item <%= point.le %>
-                 <% end %>\end{itemize}
+                 \vspace{-8pt}\begin{itemize}<% company.points.each do |point| %>
+                   \item <%= point.le %><% end %>
+                 \end{itemize}
               <% end %>
 
 \sectionspace
 
 
-\section{\fontspec[Color=MainColor]{<%= @fonts[:main] %>}
-Endorsements}
+\section{Endorsements}
 
               <% @resume.endorsements.each do |endorsement| %>
                 ``<%= endorsement.body.le %>''                    \\
-                -- <%= endorsement.from.name.le %>, <%= endorsement.from.rel.le %>
+                \hspace{1in}-- <%= endorsement.from.name.le %>, <%= endorsement.from.rel.le %>
               <% end %>
 
 \sectionspace
 
 
-\sectionspace
-
-
-\textbf{\footnotesize Contact information for personal and professional references is available upon request.}
+\textbf{
+  \footnotesize{
+    Contact information for personal and professional references is available upon request.
+  }
+}
 
 
 \end{resume}
